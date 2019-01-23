@@ -60,7 +60,8 @@ class SettingSleepViewController: UIViewController, UITextFieldDelegate {
         let date_formatter: DateFormatter = DateFormatter()
         
         date_formatter.locale = Locale(identifier: "ja")
-        date_formatter.dateFormat = "hh:mm"
+        date_formatter.timeStyle = .short
+        //date_formatter.dateFormat = "hh:mm"
         
         let time = date_formatter.string(from: date)
         var a = "AM"

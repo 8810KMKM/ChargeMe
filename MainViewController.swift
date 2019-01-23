@@ -52,6 +52,18 @@ class MainViewController: UIViewController {
         dateFormatter.timeStyle = .medium
         alertCount.text = dateFormatter.string(from: now)
     }
+    
+//    func countDown() -> Int {
+//        let dateFormatter: DateFormatter = DateFormatter()
+//        let now = Date()
+//        
+//        dateFormatter.locale = Locale(identifier: "ja")
+//        dateFormatter.dateStyle = .none
+//        dateFormatter.timeStyle = .medium
+//        
+//        return Calendar.current.dateComponents(
+//            .hour, from: date, to: self).hour ?? 0
+//    }
 
 }
 
