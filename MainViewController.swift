@@ -16,6 +16,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        countDown()
         clock()
         // Do any additional setup after loading the view.
         
@@ -53,17 +54,17 @@ class MainViewController: UIViewController {
         alertCount.text = dateFormatter.string(from: now)
     }
     
-//    func countDown() -> Int {
-//        let dateFormatter: DateFormatter = DateFormatter()
-//        let now = Date()
-//        
-//        dateFormatter.locale = Locale(identifier: "ja")
-//        dateFormatter.dateStyle = .none
-//        dateFormatter.timeStyle = .medium
-//        
-//        return Calendar.current.dateComponents(
-//            .hour, from: date, to: self).hour ?? 0
-//    }
+    func countDown() {
+        let dateFormatter: DateFormatter = DateFormatter()
+        let now = Date()
+        let userDefaults = UserDefaults.standard
+        let sleepTime = dateFormatter.date(from: userDefaults.object(forKey: "sleepTime") as! String)
+        
+        let diff = CFDateGetTimeIntervalSinceDate(now as CFDate, sleepTime! as CFDate)
+        
+        
+        print(diff)
+    }
 
 }
 
