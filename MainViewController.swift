@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        countDown()
+        //countDown()
         clock()
         // Do any additional setup after loading the view.
         
