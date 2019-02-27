@@ -26,6 +26,9 @@ class SettingSleepViewController: UIViewController, UITextFieldDelegate {
         myDatePicker.locale = Locale(identifier: "ja")
         sleepTextField.inputView = myDatePicker
         sleepTextField.delegate = self
+        sleepTime = self.dateToString(date: myDatePicker.date)
+        sleepTextField.text = sleepTime
+       
         // Do any additional setup after loading the view.
         
     }
@@ -61,7 +64,7 @@ class SettingSleepViewController: UIViewController, UITextFieldDelegate {
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         UserDefaults.standard.set(self.sleepTime, forKey: "sleepTime")
-        UserDefaults.standard.set(self.sleepMeridiem, forKey: "sleepMeridian")
+//        UserDefaults.standard.set(self.sleepMeridiem, forKey: "sleepMeridian")
 //        performSegue(withIdentifier: "sleepSegue", sender: nil)
     }
 }
