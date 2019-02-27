@@ -16,10 +16,10 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        alertCount.text = UserDefaults.standard.object(forKey: "sleepTime") as? String
         //countDown()
         clock()
         // Do any additional setup after loading the view.
-        
     }
     
 
@@ -33,11 +33,35 @@ class MainViewController: UIViewController {
     }
     */
     
+    @objc func alertTimeIsNow(_ sender: Timer) -> Bool {
+        let userDefault = UserDefaults.standard
+        let dateFormatter: DateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "ja")
+        dateFormatter.timeStyle = .short
+        dateFormatter.dateFormat = "HH:mm"
+        let now = Date()
+        let alertTime = dateFormatter.date(from: userDefault.object(forKey: "sleepTime") as! String)
+        
+        if alertTime! < now {
+            print("hoge")
+            print(dateFormatter.string(from: now))
+            print(dateFormatter.string(from: alertTime!))
+        } else {
+            print("fuga")
+            
+        }
+        
+        
+        
+        
+        return true
+    }
+    
     func clock() {
         let timer = Timer.scheduledTimer(
                         timeInterval: 1.0,
                         target: self,
-                        selector: #selector(getNowTime(_:)),
+                        selector: #selector(alertTimeIsNow(_:)),
                         userInfo: nil,
                         repeats: true)
         timer.fire()
