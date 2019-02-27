@@ -69,5 +69,8 @@ class SetTimingViewController: UIViewController,UIPickerViewDelegate, UIPickerVi
         // Pass the selected object to the new view controller.
     }
     */
-
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        UserDefaults.standard.set(self.timingTextField.text?.prefix(2), forKey: "alertTiming")
+        performSegue(withIdentifier: "timingSegue", sender: nil)
+    }
 }
