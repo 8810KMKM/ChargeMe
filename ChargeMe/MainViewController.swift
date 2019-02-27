@@ -17,7 +17,6 @@ class MainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //countDown()
-        
         clock()
         // Do any additional setup after loading the view.
         
@@ -38,8 +37,7 @@ class MainViewController: UIViewController {
         let timer = Timer.scheduledTimer(
                         timeInterval: 1.0,
                         target: self,
-                        selector: #selector(countDown(_:)),
-//                        selector: #selector(getNowTime(_:)),
+                        selector: #selector(getNowTime(_:)),
                         userInfo: nil,
                         repeats: true)
         timer.fire()
@@ -56,32 +54,16 @@ class MainViewController: UIViewController {
         alertCount.text = dateFormatter.string(from: now)
     }
     
-    @objc func countDown(_ sender: Timer) {
+    func countDown() {
         let dateFormatter: DateFormatter = DateFormatter()
         let now = Date()
         let userDefaults = UserDefaults.standard
-//        let time = userDefaults.object(forKey: "sleepTime") as! String;
-        dateFormatter.locale = Locale(identifier: "ja")
-        dateFormatter.dateStyle = .none
-        dateFormatter.timeStyle = .medium
-        let userDate = userDefaults.object(forKey: "sleepTime")
         let sleepTime = dateFormatter.date(from: userDefaults.object(forKey: "sleepTime") as! String)
         
-        alertCount.text = String(calcuclateInterval(sleepTime: sleepTime!))
+        let diff = CFDateGetTimeIntervalSinceDate(now as CFDate, sleepTime! as CFDate)
         
-    }
-    
-    @objc func calcuclateInterval(sleepTime: Date) -> Int{
-        var interval = Int(sleepTime.timeIntervalSinceNow)
         
-        if interval < 0 {
-            interval = 86400 - (0 - interval)
-        }
-        
-        let calender = Calendar.current
-        let seconds = calender.component(.second, from: sleepTime)
-        
-        return interval - seconds
+        print(diff)
     }
 
 }
@@ -102,6 +84,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "alertCell", for: indexPath) as! AlertCollectionViewCell
             cell.updateCell(timing: userDefaults.object(forKey: "alertTiming") as! String)
             return cell
+            
         }
     }
 }

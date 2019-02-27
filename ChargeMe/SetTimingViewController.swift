@@ -12,7 +12,7 @@ class SetTimingViewController: UIViewController,UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var timing: UITextField!
     
     var pickerView: UIPickerView = UIPickerView()
-    let timingList = ["01", "05", "10", "15", "30"]
+    let timingList = ["1", "5", "10", "15", "30"]
     
     override func viewDidLoad() {
         pickerView.delegate = self
