@@ -28,7 +28,7 @@ class SettingSleepViewController: UIViewController, UITextFieldDelegate {
         sleepTextField.delegate = self
         sleepTime = self.dateToString(date: myDatePicker.date)
         sleepTextField.text = sleepTime
-       
+        UserDefaults.standard.set(sleepTime, forKey: "sleepTime")
         // Do any additional setup after loading the view.
         
     }
