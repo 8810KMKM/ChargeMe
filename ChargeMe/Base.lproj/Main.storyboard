@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MWK-eq-q1b">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -14,12 +14,12 @@
         <!--Setting Sleep View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SettingSleepViewController" customModule="ChargeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstViewController" id="BYZ-38-t0r" customClass="SettingSleepViewController" customModule="ChargeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2b-ud-66e">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2b-ud-66e" customClass="DoneTextField" customModule="ChargeMe" customModuleProvider="target">
                                 <rect key="frame" x="64" y="303.5" width="247" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="i96-YH-EWJ"/>
@@ -50,7 +50,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="sleepTextField" destination="x2b-ud-66e" id="t6N-pG-qN3"/>
+                        <outlet property="sleepTextField" destination="x2b-ud-66e" id="oGU-NR-5hT"/>
                         <segue destination="d1K-2H-8nP" kind="show" identifier="sleepSegue" id="Arx-Ve-6pT"/>
                     </connections>
                 </viewController>
@@ -61,7 +61,7 @@
         <!--Set Timing View Controller-->
         <scene sceneID="GG8-hn-1GK">
             <objects>
-                <viewController id="d1K-2H-8nP" customClass="SetTimingViewController" customModule="ChargeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" id="d1K-2H-8nP" customClass="SetTimingViewController" customModule="ChargeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fb4-DI-niA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,7 +72,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jww-Ak-Hkg">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jww-Ak-Hkg" customClass="DoneTextField" customModule="ChargeMe" customModuleProvider="target">
                                 <rect key="frame" x="64" y="303.5" width="247" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="2Pm-Z6-IBM"/>
@@ -95,13 +95,21 @@
                         <viewLayoutGuide key="safeArea" id="pxC-Pb-nc3"/>
                     </view>
                     <connections>
-                        <outlet property="timing" destination="jww-Ak-Hkg" id="ABs-nU-sQ0"/>
+                        <outlet property="timingTextField" destination="jww-Ak-Hkg" id="aW3-CL-GjO"/>
                         <segue destination="6D4-Va-fMq" kind="showDetail" identifier="timingSegue" id="B9M-Ub-7Sn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dR-h9-PtQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="762" y="27"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="j63-ll-Tpw">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="MWK-eq-q1b" customClass="SettingViewController" customModule="ChargeMe" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4bD-Ls-aeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-654" y="27"/>
         </scene>
         <!--CHARGE-ME-->
         <scene sceneID="Z5i-JJ-dzr">
@@ -262,7 +270,7 @@
         <!--Navigation Controller-->
         <scene sceneID="2f4-B2-JYw">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6D4-Va-fMq" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="MainViewController" automaticallyAdjustsScrollViewInsets="NO" id="6D4-Va-fMq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uiT-gp-D1u">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
