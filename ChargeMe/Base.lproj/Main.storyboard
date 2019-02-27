@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2b-ud-66e">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2b-ud-66e" customClass="DoneTextField" customModule="ChargeMe" customModuleProvider="target">
                                 <rect key="frame" x="64" y="303.5" width="247" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="i96-YH-EWJ"/>
@@ -50,7 +50,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="sleepTextField" destination="x2b-ud-66e" id="t6N-pG-qN3"/>
+                        <outlet property="sleepTextField" destination="x2b-ud-66e" id="oGU-NR-5hT"/>
                         <segue destination="d1K-2H-8nP" kind="show" identifier="sleepSegue" id="Arx-Ve-6pT"/>
                     </connections>
                 </viewController>
@@ -72,7 +72,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jww-Ak-Hkg">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jww-Ak-Hkg" customClass="DoneTextField" customModule="ChargeMe" customModuleProvider="target">
                                 <rect key="frame" x="64" y="303.5" width="247" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="2Pm-Z6-IBM"/>
@@ -95,7 +95,7 @@
                         <viewLayoutGuide key="safeArea" id="pxC-Pb-nc3"/>
                     </view>
                     <connections>
-                        <outlet property="timing" destination="jww-Ak-Hkg" id="ABs-nU-sQ0"/>
+                        <outlet property="timingTextField" destination="jww-Ak-Hkg" id="aW3-CL-GjO"/>
                         <segue destination="6D4-Va-fMq" kind="showDetail" identifier="timingSegue" id="B9M-Ub-7Sn"/>
                     </connections>
                 </viewController>

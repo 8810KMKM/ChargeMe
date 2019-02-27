@@ -9,7 +9,7 @@
 import UIKit
 
 class SetTimingViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
-    @IBOutlet weak var timing: UITextField!
+    @IBOutlet weak var timingTextField: DoneTextField!
     
     var pickerView: UIPickerView = UIPickerView()
     let timingList = ["1", "5", "10", "15", "30"]
@@ -25,20 +25,20 @@ class SetTimingViewController: UIViewController,UIPickerViewDelegate, UIPickerVi
         let cancelItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
         toolbar.setItems([toolBarBtn], animated: true)
         
-        self.timing.inputView = pickerView
-        self.timing.inputAccessoryView = toolbar
+        self.timingTextField.inputView = pickerView
+        self.timingTextField.inputAccessoryView = toolbar
     }
     
     @objc func done() {
-        self.timing.endEditing(true)
+        self.timingTextField.endEditing(true)
         
-        UserDefaults.standard.set(self.timing.text?.prefix(2), forKey: "alertTiming")
+        UserDefaults.standard.set(self.timingTextField.text?.prefix(2), forKey: "alertTiming")
         performSegue(withIdentifier: "timingSegue", sender: nil)
     }
     
     @objc func cancel() {
-        self.timing.text = ""
-        self.timing.endEditing(true)
+        self.timingTextField.text = ""
+        self.timingTextField.endEditing(true)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -54,7 +54,7 @@ class SetTimingViewController: UIViewController,UIPickerViewDelegate, UIPickerVi
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.timing.text = timingList[row] + "分前"
+        self.timingTextField.text = timingList[row] + "分前"
     }
 
     override func didReceiveMemoryWarning() {

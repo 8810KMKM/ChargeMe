@@ -9,7 +9,7 @@
 import UIKit
 
 class SettingSleepViewController: UIViewController, UITextFieldDelegate {
-    @IBOutlet weak var sleepTextField: UITextField!
+    @IBOutlet weak var sleepTextField: DoneTextField!
     
     var toolBar:UIToolbar!
     var myDatePicker: UIDatePicker!
@@ -24,20 +24,9 @@ class SettingSleepViewController: UIViewController, UITextFieldDelegate {
         myDatePicker.addTarget(self, action: #selector(changedDateEvent(sender:)), for: UIControl.Event.valueChanged)
         myDatePicker.datePickerMode = UIDatePicker.Mode.time
         sleepTextField.inputView = myDatePicker
+        sleepTextField.delegate = self
         // Do any additional setup after loading the view.
         
-        //UIToolBarの設定
-        toolBar = UIToolbar(frame: CGRect(x: 0, y: self.view.frame.size.height/6, width: self.view.frame.size.width, height: 40.0))
-        toolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.height-20.0)
-        toolBar.barStyle = .blackTranslucent
-        
-        let toolBarBtn = UIBarButtonItem(title: "OK!", style: .done, target: self, action: #selector(done))
-        
-        toolBarBtn.tag = 1
-        
-        toolBar.items = [toolBarBtn]
-        
-        sleepTextField.inputAccessoryView = toolBar
     }
     
     @objc func done() {
@@ -86,14 +75,11 @@ class SettingSleepViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        UserDefaults.standard.set(sleepTime, forKey: "sleepTime")
+        UserDefaults.standard.set(sleepMeridiem, forKey: "sleepMeridian")
+        performSegue(withIdentifier: "sleepSegue", sender: nil)
     }
-    */
-
 }
+
