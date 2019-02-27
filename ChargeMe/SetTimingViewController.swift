@@ -8,25 +8,21 @@
 
 import UIKit
 
-class SetTimingViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource {
+class SetTimingViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     @IBOutlet weak var timingTextField: DoneTextField!
     
     var pickerView: UIPickerView = UIPickerView()
     let timingList = ["1", "5", "10", "15", "30"]
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         pickerView.delegate = self
+        timingTextField.delegate = self
         pickerView.dataSource = self
         pickerView.showsSelectionIndicator = true
         
-        let toolbar = UIToolbar(frame: CGRect(x: 0, y: 0, width: 0, height: 35))
-        let doneItem = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
-        let toolBarBtn = UIBarButtonItem(title: "OK!", style: .done, target: self, action: #selector(done))
-        let cancelItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
-        toolbar.setItems([toolBarBtn], animated: true)
         
         self.timingTextField.inputView = pickerView
-        self.timingTextField.inputAccessoryView = toolbar
     }
     
     @objc func done() {
