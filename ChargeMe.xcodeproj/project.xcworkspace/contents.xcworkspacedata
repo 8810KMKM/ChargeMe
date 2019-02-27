@@ -2,6 +2,33 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:ChargeMe.xcodeproj">
+      location = "group:/Users/hayato_okuma/workspace/ChargeMe/ChargeMe/countDownViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/hayato_okuma/workspace/ChargeMe/ChargeMe/SetTimingViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/hayato_okuma/workspace/ChargeMe/ChargeMe/SettingSleepViewController 2.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../ChargeMe/AlertCollectionViewCell.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../ChargeMe/AppDelegate.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../ChargeMe/Info.plist">
+   </FileRef>
+   <FileRef
+      location = "group:../ChargeMe/MainViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/hayato_okuma/workspace/ChargeMe/ChargeMe/SettingSleepViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/hayato_okuma/workspace/ChargeMe/ChargeMe/TimeCollectionViewCell.swift">
+   </FileRef>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>

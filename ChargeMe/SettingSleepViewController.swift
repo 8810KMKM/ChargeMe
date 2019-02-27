@@ -9,7 +9,7 @@
 import UIKit
 
 class SettingSleepViewController: UIViewController, UITextFieldDelegate {
-    @IBOutlet weak var sleepTextField: UITextField!
+    @IBOutlet weak var sleepTextField: DoneTextField!
     
     var toolBar:UIToolbar!
     var myDatePicker: UIDatePicker!
@@ -23,21 +23,11 @@ class SettingSleepViewController: UIViewController, UITextFieldDelegate {
         myDatePicker = UIDatePicker()
         myDatePicker.addTarget(self, action: #selector(changedDateEvent(sender:)), for: UIControl.Event.valueChanged)
         myDatePicker.datePickerMode = UIDatePicker.Mode.time
+        myDatePicker.locale = Locale(identifier: "ja")
         sleepTextField.inputView = myDatePicker
+        sleepTextField.delegate = self
         // Do any additional setup after loading the view.
         
-        //UIToolBarの設定
-        toolBar = UIToolbar(frame: CGRect(x: 0, y: self.view.frame.size.height/6, width: self.view.frame.size.width, height: 40.0))
-        toolBar.layer.position = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.height-20.0)
-        toolBar.barStyle = .blackTranslucent
-        
-        let toolBarBtn = UIBarButtonItem(title: "OK!", style: .done, target: self, action: #selector(done))
-        
-        toolBarBtn.tag = 1
-        
-        toolBar.items = [toolBarBtn]
-        
-        sleepTextField.inputAccessoryView = toolBar
     }
     
     @objc func done() {
@@ -46,39 +36,21 @@ class SettingSleepViewController: UIViewController, UITextFieldDelegate {
         performSegue(withIdentifier: "sleepSegue", sender: nil)
     }
     
-    @objc func changedDateEvent(sender: Any){
-        self.changeLabelDate(date: myDatePicker.date)
-    }
-    
-    func changeLabelDate(date: Date) {
-        
-        sleepTextField.text = self.dateToString(date: date)
+    @objc func changedDateEvent(sender: Any) {
+        print(myDatePicker.date)
+        let newTime = self.dateToString(date: myDatePicker.date)
+        self.sleepTime = newTime
+        sleepTextField.text = newTime
     }
     
     func dateToString(date: Date) -> String {
         
-        let date_formatter: DateFormatter = DateFormatter()
+        let dateFormatter: DateFormatter = DateFormatter()
         
-        date_formatter.locale = Locale(identifier: "ja")
-        date_formatter.timeStyle = .short
-        //date_formatter.dateFormat = "hh:mm"
-        
-        let time = date_formatter.string(from: date)
-        var a = "AM"
-        date_formatter.dateFormat = "a"
-        switch date_formatter.string(from: date) {
-        case "午前":
-            a = "AM"
-        case "午後":
-            a = "PM"
-        default:
-            break
-        }
-        
-        sleepTime = time
-        sleepMeridiem = a
-        
-        return time + " " + a
+        dateFormatter.locale = Locale(identifier: "ja")
+        dateFormatter.timeStyle = .short
+        dateFormatter.dateFormat = "HH:mm"
+        return dateFormatter.string(from: date)
     }
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
@@ -86,14 +58,10 @@ class SettingSleepViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        UserDefaults.standard.set(self.sleepTime, forKey: "sleepTime")
+        UserDefaults.standard.set(self.sleepMeridiem, forKey: "sleepMeridian")
+        performSegue(withIdentifier: "sleepSegue", sender: nil)
     }
-    */
-
 }
