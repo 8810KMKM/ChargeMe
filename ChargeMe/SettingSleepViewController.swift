@@ -62,6 +62,6 @@ class SettingSleepViewController: UIViewController, UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         UserDefaults.standard.set(self.sleepTime, forKey: "sleepTime")
         UserDefaults.standard.set(self.sleepMeridiem, forKey: "sleepMeridian")
-        performSegue(withIdentifier: "sleepSegue", sender: nil)
+//        performSegue(withIdentifier: "sleepSegue", sender: nil)
     }
 }
