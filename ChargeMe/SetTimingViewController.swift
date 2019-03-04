@@ -12,7 +12,7 @@ class SetTimingViewController: UIViewController,UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var timingTextField: DoneTextField!
     
     var pickerView: UIPickerView = UIPickerView()
-    let timingList = ["1", "5", "10", "15", "30"]
+    let timingList = ["--", "1", "5", "10", "15", "30"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,6 @@ class SetTimingViewController: UIViewController,UIPickerViewDelegate, UIPickerVi
         
         
         self.timingTextField.inputView = pickerView
-        self.timingTextField.text = timingList[0] + "分前"
     }
     
     @objc func done() {
@@ -51,7 +50,7 @@ class SetTimingViewController: UIViewController,UIPickerViewDelegate, UIPickerVi
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        self.timingTextField.text = timingList[row] + "分前"
+        self.timingTextField.text = timingList[row]
     }
 
     override func didReceiveMemoryWarning() {

@@ -97,15 +97,15 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let userDefaults = UserDefaults.standard
         if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "timeCell", for: indexPath) as! TimeCollectionViewCell
-            cell.updateCell(time: userDefaults.object(forKey: "sleepTime") as! String,
-                            meridian: userDefaults.object(forKey: "sleepMeridian") as! String )
+            cell.updateCell(time: UserDefaults.sleepTime,
+                            meridian: "")
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "alertCell", for: indexPath) as! AlertCollectionViewCell
-            cell.updateCell(timing: userDefaults.object(forKey: "alertTiming") as! String)
+            print(UserDefaults.alertTiming)
+            cell.updateCell(timing: UserDefaults.alertTiming)
             return cell
             
         }

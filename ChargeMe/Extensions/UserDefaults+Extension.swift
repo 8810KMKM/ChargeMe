@@ -20,7 +20,14 @@ extension UserDefaults {
     }
     
     static var alertTiming: String {
-        get { return self.standard.string(forKey: UserDefaultsKeys.alertTiming) ?? "" }
+        get {
+            print(self.standard.string(forKey: UserDefaultsKeys.alertTiming)?.characters.count)
+            if self.standard.string(forKey: UserDefaultsKeys.alertTiming) == "1" || self.standard.string(forKey: UserDefaultsKeys.alertTiming) == "5"  {
+                return "0" + (self.standard.string(forKey: UserDefaultsKeys.alertTiming) ?? "")
+            }
+            return self.standard.string(forKey: UserDefaultsKeys.alertTiming) ?? ""
+            
+        }
         set { self.standard.set(newValue, forKey: UserDefaultsKeys.alertTiming) }
     }
     

@@ -68,13 +68,13 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="就寝時刻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8P6-Qt-eq7">
-                                                    <rect key="frame" x="41" y="36" width="68" height="17"/>
+                                                    <rect key="frame" x="41" y="44" width="68" height="17"/>
                                                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                                     <color key="textColor" name="Main"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJs-yI-aaL">
-                                                    <rect key="frame" x="24.5" y="44" width="16" height="16"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJs-yI-aaL">
+                                                    <rect key="frame" x="24.5" y="60" width="0.0" height="0.0"/>
                                                     <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="16"/>
                                                     <color key="textColor" name="Main"/>
                                                     <nil key="highlightedColor"/>
@@ -86,7 +86,7 @@
                                             <constraint firstItem="9A7-Fg-DBd" firstAttribute="centerX" secondItem="JWw-Xx-RHg" secondAttribute="centerX" id="7Rd-UG-gQe"/>
                                             <constraint firstItem="bJs-yI-aaL" firstAttribute="leading" secondItem="9A7-Fg-DBd" secondAttribute="leading" id="Jet-EU-qyo"/>
                                             <constraint firstItem="9A7-Fg-DBd" firstAttribute="top" secondItem="bJs-yI-aaL" secondAttribute="bottom" constant="8" id="Vch-S2-SRf"/>
-                                            <constraint firstItem="8P6-Qt-eq7" firstAttribute="top" secondItem="JWw-Xx-RHg" secondAttribute="topMargin" constant="8" id="WWj-hg-SEt"/>
+                                            <constraint firstItem="8P6-Qt-eq7" firstAttribute="top" secondItem="JWw-Xx-RHg" secondAttribute="topMargin" constant="16" id="WWj-hg-SEt"/>
                                             <constraint firstItem="8P6-Qt-eq7" firstAttribute="centerX" secondItem="JWw-Xx-RHg" secondAttribute="centerX" id="eJy-9S-wfP"/>
                                             <constraint firstItem="9A7-Fg-DBd" firstAttribute="centerY" secondItem="JWw-Xx-RHg" secondAttribute="centerY" constant="23" id="uOY-1f-ngP"/>
                                         </constraints>
@@ -103,12 +103,12 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイミング" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jov-dd-x0U">
-                                                    <rect key="frame" x="32.5" y="36" width="85" height="17"/>
+                                                    <rect key="frame" x="32.5" y="44" width="85" height="17"/>
                                                     <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                                     <color key="textColor" name="Main"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhP-ZR-ODd">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HhP-ZR-ODd">
                                                     <rect key="frame" x="32.5" y="68" width="45" height="60"/>
                                                     <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="60"/>
                                                     <color key="textColor" name="Main"/>
@@ -126,7 +126,7 @@
                                         <constraints>
                                             <constraint firstItem="jov-dd-x0U" firstAttribute="centerX" secondItem="qSV-61-udc" secondAttribute="centerX" id="gDf-uG-EZX"/>
                                             <constraint firstItem="jov-dd-x0U" firstAttribute="leading" secondItem="HhP-ZR-ODd" secondAttribute="leading" id="okC-6D-WvS"/>
-                                            <constraint firstItem="jov-dd-x0U" firstAttribute="top" secondItem="qSV-61-udc" secondAttribute="topMargin" constant="8" id="qvt-5W-TTV"/>
+                                            <constraint firstItem="jov-dd-x0U" firstAttribute="top" secondItem="qSV-61-udc" secondAttribute="topMargin" constant="16" id="qvt-5W-TTV"/>
                                             <constraint firstItem="JTZ-aV-M1Y" firstAttribute="trailing" secondItem="jov-dd-x0U" secondAttribute="trailing" id="rxF-jG-rvh"/>
                                             <constraint firstItem="JTZ-aV-M1Y" firstAttribute="centerY" secondItem="qSV-61-udc" secondAttribute="centerY" constant="15" id="slV-ft-5AZ"/>
                                             <constraint firstItem="HhP-ZR-ODd" firstAttribute="centerY" secondItem="qSV-61-udc" secondAttribute="centerY" constant="23" id="wgT-C4-InI"/>
