@@ -23,6 +23,7 @@ class SetTimingViewController: UIViewController,UIPickerViewDelegate, UIPickerVi
         
         
         self.timingTextField.inputView = pickerView
+        self.timingTextField.text = timingList[0] + "分前"
     }
     
     @objc func done() {

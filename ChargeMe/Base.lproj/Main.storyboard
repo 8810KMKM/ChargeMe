@@ -110,7 +110,7 @@
                     </view>
                     <connections>
                         <outlet property="timingTextField" destination="jww-Ak-Hkg" id="aW3-CL-GjO"/>
-                        <segue destination="6D4-Va-fMq" kind="showDetail" identifier="timingSegue" id="B9M-Ub-7Sn"/>
+                        <segue destination="saS-eH-Xrr" kind="show" identifier="timingSegue" id="tt0-6B-bFK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dR-h9-PtQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -125,189 +125,13 @@
             </objects>
             <point key="canvasLocation" x="-654" y="27"/>
         </scene>
-        <!--CHARGE-ME-->
-        <scene sceneID="Z5i-JJ-dzr">
+        <!--MainViewController-->
+        <scene sceneID="1Ki-ZR-RRp">
             <objects>
-                <viewController id="pQV-Jb-aQ3" customClass="MainViewController" customModule="ChargeMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="5TA-Ds-RWM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PdV-bF-J6J">
-                                <rect key="frame" x="-6" y="123" width="381" height="171"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYR-s3-WFg">
-                                <rect key="frame" x="107" y="185" width="161" height="96"/>
-                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="96"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充電中" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvz-sl-dze">
-                                <rect key="frame" x="107" y="329" width="161" height="48"/>
-                                <color key="backgroundColor" name="Main"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="H80-G8-oPm"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QFl-tS-F55">
-                                <rect key="frame" x="0.0" y="417" width="375" height="150"/>
-                                <color key="backgroundColor" red="0.76282520340000004" green="0.76282520340000004" blue="0.76282520340000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="wsl-u9-CUv"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YDc-GI-AW6">
-                                    <size key="itemSize" width="150" height="150"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="24" minY="0.0" maxX="24" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="timeCell" id="zmG-F3-cEN" customClass="TimeCollectionViewCell" customModule="ChargeMe" customModuleProvider="target">
-                                        <rect key="frame" x="24" y="0.0" width="150" height="150"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9e-8u-WA9">
-                                                    <rect key="frame" x="24.5" y="68" width="101" height="60"/>
-                                                    <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="60"/>
-                                                    <color key="textColor" name="Main"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="就寝時刻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HQF-69-jW4">
-                                                    <rect key="frame" x="41" y="36" width="68" height="17"/>
-                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
-                                                    <color key="textColor" name="Main"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EFj-sh-Zg2">
-                                                    <rect key="frame" x="24.5" y="44" width="16" height="16"/>
-                                                    <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="16"/>
-                                                    <color key="textColor" name="Main"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="Y9e-8u-WA9" firstAttribute="top" secondItem="EFj-sh-Zg2" secondAttribute="bottom" constant="8" id="1Xs-p7-WeN"/>
-                                            <constraint firstItem="Y9e-8u-WA9" firstAttribute="centerX" secondItem="zmG-F3-cEN" secondAttribute="centerX" id="VRe-XX-HiI"/>
-                                            <constraint firstItem="Y9e-8u-WA9" firstAttribute="centerY" secondItem="zmG-F3-cEN" secondAttribute="centerY" constant="23" id="e2l-M5-zoh"/>
-                                            <constraint firstItem="EFj-sh-Zg2" firstAttribute="leading" secondItem="Y9e-8u-WA9" secondAttribute="leading" id="leo-iL-Umz"/>
-                                            <constraint firstItem="HQF-69-jW4" firstAttribute="centerX" secondItem="zmG-F3-cEN" secondAttribute="centerX" id="opp-Z0-deK"/>
-                                            <constraint firstItem="HQF-69-jW4" firstAttribute="top" secondItem="zmG-F3-cEN" secondAttribute="topMargin" constant="8" id="pC6-Bm-KB8"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="meridianLabel" destination="EFj-sh-Zg2" id="qvG-oe-vff"/>
-                                            <outlet property="timeLabel" destination="Y9e-8u-WA9" id="xkw-b5-LLe"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="alertCell" id="1zm-og-hvN" customClass="AlertCollectionViewCell" customModule="ChargeMe" customModuleProvider="target">
-                                        <rect key="frame" x="201" y="0.0" width="150" height="150"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイミング" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="diU-Ur-RMm">
-                                                    <rect key="frame" x="32.5" y="36" width="85" height="17"/>
-                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
-                                                    <color key="textColor" name="Main"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="05" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohU-sd-qKJ">
-                                                    <rect key="frame" x="32.5" y="68" width="45" height="60"/>
-                                                    <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="60"/>
-                                                    <color key="textColor" name="Main"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分前" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKz-L5-0BA">
-                                                    <rect key="frame" x="83.5" y="81.5" width="34" height="17"/>
-                                                    <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
-                                                    <color key="textColor" name="Main"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstItem="diU-Ur-RMm" firstAttribute="top" secondItem="1zm-og-hvN" secondAttribute="topMargin" constant="8" id="6rf-U5-3YT"/>
-                                            <constraint firstItem="diU-Ur-RMm" firstAttribute="leading" secondItem="ohU-sd-qKJ" secondAttribute="leading" id="KX9-Cz-UH9"/>
-                                            <constraint firstItem="AKz-L5-0BA" firstAttribute="trailing" secondItem="diU-Ur-RMm" secondAttribute="trailing" id="MDm-fK-8Bw"/>
-                                            <constraint firstItem="ohU-sd-qKJ" firstAttribute="centerY" secondItem="1zm-og-hvN" secondAttribute="centerY" constant="23" id="Q80-o5-8JW"/>
-                                            <constraint firstItem="AKz-L5-0BA" firstAttribute="centerY" secondItem="1zm-og-hvN" secondAttribute="centerY" constant="15" id="ZO0-BM-GGj"/>
-                                            <constraint firstItem="diU-Ur-RMm" firstAttribute="centerX" secondItem="1zm-og-hvN" secondAttribute="centerX" id="bhh-Mx-8KC"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="timingLabel" destination="ohU-sd-qKJ" id="Aqf-XH-6iZ"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="pQV-Jb-aQ3" id="SWk-pt-fNW"/>
-                                    <outlet property="delegate" destination="pQV-Jb-aQ3" id="ylZ-Ch-USm"/>
-                                </connections>
-                            </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通知時刻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rw0-oa-0an">
-                                <rect key="frame" x="137.5" y="136" width="100" height="25"/>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.76282520337425985" green="0.76282520337425985" blue="0.76282520337425985" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
-                        <constraints>
-                            <constraint firstItem="Rw0-oa-0an" firstAttribute="centerX" secondItem="5TA-Ds-RWM" secondAttribute="centerX" id="5w9-sJ-RJx"/>
-                            <constraint firstItem="QFl-tS-F55" firstAttribute="top" secondItem="dvz-sl-dze" secondAttribute="bottom" constant="40" id="9gM-XH-HVW"/>
-                            <constraint firstItem="dvz-sl-dze" firstAttribute="top" secondItem="qYR-s3-WFg" secondAttribute="bottom" constant="48" id="CKH-ir-yj4"/>
-                            <constraint firstItem="qYR-s3-WFg" firstAttribute="centerX" secondItem="5TA-Ds-RWM" secondAttribute="centerX" id="PX3-n5-iOZ"/>
-                            <constraint firstItem="dvz-sl-dze" firstAttribute="centerX" secondItem="5TA-Ds-RWM" secondAttribute="centerX" id="R9W-UR-1lq"/>
-                            <constraint firstItem="qYR-s3-WFg" firstAttribute="top" secondItem="Rw0-oa-0an" secondAttribute="bottom" constant="24" id="TWf-dU-Wj5"/>
-                            <constraint firstItem="QFl-tS-F55" firstAttribute="leading" secondItem="9tB-7l-blm" secondAttribute="leading" id="agt-T2-npI"/>
-                            <constraint firstItem="Rw0-oa-0an" firstAttribute="top" secondItem="9tB-7l-blm" secondAttribute="top" constant="72" id="dQY-6D-xPE"/>
-                            <constraint firstItem="9tB-7l-blm" firstAttribute="trailing" secondItem="QFl-tS-F55" secondAttribute="trailing" id="e6E-qr-JCT"/>
-                            <constraint firstItem="dvz-sl-dze" firstAttribute="width" secondItem="qYR-s3-WFg" secondAttribute="width" id="ppC-ev-qIv"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="9tB-7l-blm"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="CHARGE-ME" id="wIT-I3-4uy"/>
-                    <connections>
-                        <outlet property="alertCount" destination="qYR-s3-WFg" id="qwF-Nb-0v5"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EqA-er-S3Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewControllerPlaceholder storyboardName="MainViewController" id="saS-eH-Xrr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DgA-JW-8wD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2428" y="26.53673163418291"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="2f4-B2-JYw">
-            <objects>
-                <navigationController storyboardIdentifier="MainViewController" automaticallyAdjustsScrollViewInsets="NO" id="6D4-Va-fMq" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uiT-gp-D1u">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" name="Main"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="30"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="pQV-Jb-aQ3" kind="relationship" relationship="rootViewController" id="A6r-Kq-Qkm"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FT8-YJ-0NL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1488.8" y="26.53673163418291"/>
+            <point key="canvasLocation" x="2055" y="12"/>
         </scene>
     </scenes>
     <resources>
