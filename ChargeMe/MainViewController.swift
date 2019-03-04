@@ -35,26 +35,24 @@ class MainViewController: UIViewController {
     */
     
     @objc func alertTimeIsNow(_ sender: Timer) -> Bool {
-        let userDefault = UserDefaults.standard
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "ja")
         dateFormatter.timeStyle = .short
         dateFormatter.dateFormat = "HH:mm"
         let now = Date()
-        let alertTime = dateFormatter.date(from: userDefault.object(forKey: "sleepTime") as! String)
-        
-        if alertTime! < now {
+        let sleepTime = UserDefaults.sleepTime
+        if sleepTime.isEmpty {
+            return false // 空だとfalse
+        }
+        guard let alertTime = dateFormatter.date(from: sleepTime) else { return  false }
+        if alertTime < now {
             print("hoge")
             print(dateFormatter.string(from: now))
-            print(dateFormatter.string(from: alertTime!))
+            print(dateFormatter.string(from: alertTime))
         } else {
             print("fuga")
             
         }
-        
-        
-        
-        
         return true
     }
     

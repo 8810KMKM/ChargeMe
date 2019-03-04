@@ -27,10 +27,10 @@ class SetTimingViewController: UIViewController,UIPickerViewDelegate, UIPickerVi
     }
     
     @objc func done() {
-        self.timingTextField.endEditing(true)
-        
-        UserDefaults.standard.set(self.timingTextField.text?.prefix(2), forKey: "alertTiming")
-        performSegue(withIdentifier: "timingSegue", sender: nil)
+//        self.timingTextField.endEditing(true)
+//
+//        UserDefaults.standard.set(self.timingTextField.text?.prefix(2), forKey: "alertTiming")
+//        performSegue(withIdentifier: "timingSegue", sender: nil)
     }
     
     @objc func cancel() {
@@ -67,7 +67,7 @@ class SetTimingViewController: UIViewController,UIPickerViewDelegate, UIPickerVi
     }
     */
     func textFieldDidEndEditing(_ textField: UITextField) {
-        UserDefaults.standard.set(self.timingTextField.text?.prefix(2), forKey: "alertTiming")
+        UserDefaults.alertTiming = self.timingTextField.text!
         performSegue(withIdentifier: "timingSegue", sender: nil)
     }
 }
