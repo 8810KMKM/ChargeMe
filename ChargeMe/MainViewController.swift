@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class MainViewController: UIViewController {
 
@@ -15,9 +16,9 @@ class MainViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        alertPermission()
         super.viewDidLoad()
-        //alertCount.text = UserDefaults.standard.object(forKey: "sleepTime") as? String
-        alertCount.text = "23:20"
+        alertCount.text = UserDefaults.sleepTime
         //countDown()
         //clock()
         // Do any additional setup after loading the view.
@@ -88,8 +89,9 @@ class MainViewController: UIViewController {
         
         print(diff)
     }
-
 }
+
+
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

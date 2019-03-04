@@ -26,13 +26,13 @@
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6f-ZJ-Bya">
-                                <rect key="frame" x="107" y="185" width="161" height="96"/>
+                                <rect key="frame" x="107" y="193" width="161" height="96"/>
                                 <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="96"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="充電中" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTe-pM-7I3">
-                                <rect key="frame" x="107" y="329" width="161" height="48"/>
+                                <rect key="frame" x="107" y="337" width="161" height="48"/>
                                 <color key="backgroundColor" name="Main"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="cdm-8z-O2l"/>
@@ -42,7 +42,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gwL-eL-ZzB">
-                                <rect key="frame" x="0.0" y="417" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="425" width="375" height="150"/>
                                 <color key="backgroundColor" red="0.76282520340000004" green="0.76282520340000004" blue="0.76282520340000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="hyW-nJ-0bh"/>
@@ -142,7 +142,7 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通知時刻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mWK-uE-7x0">
-                                <rect key="frame" x="137.5" y="136" width="100" height="25"/>
+                                <rect key="frame" x="137.5" y="144" width="100" height="25"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -160,7 +160,7 @@
                             <constraint firstItem="bKj-fQ-Er3" firstAttribute="trailing" secondItem="gwL-eL-ZzB" secondAttribute="trailing" id="hcG-Gw-TVH"/>
                             <constraint firstItem="ZTe-pM-7I3" firstAttribute="width" secondItem="q6f-ZJ-Bya" secondAttribute="width" id="jUZ-GU-WBz"/>
                             <constraint firstItem="gwL-eL-ZzB" firstAttribute="leading" secondItem="bKj-fQ-Er3" secondAttribute="leading" id="yEP-Iw-DdP"/>
-                            <constraint firstItem="mWK-uE-7x0" firstAttribute="top" secondItem="bKj-fQ-Er3" secondAttribute="top" constant="72" id="yOj-cG-4lP"/>
+                            <constraint firstItem="mWK-uE-7x0" firstAttribute="top" secondItem="bKj-fQ-Er3" secondAttribute="top" constant="80" id="yOj-cG-4lP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bKj-fQ-Er3"/>
                     </view>

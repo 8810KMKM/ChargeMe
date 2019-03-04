@@ -12,6 +12,7 @@
 		4510E57E21EA471F008853F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4510E57C21EA471F008853F4 /* LaunchScreen.storyboard */; };
 		452152E7222D2A0F005CEA6A /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452152E6222D2A0F005CEA6A /* MainViewController.storyboard */; };
 		452152EA222D2D06005CEA6A /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452152E9222D2D06005CEA6A /* UserDefaults+Extension.swift */; };
+		452152ED222D6D05005CEA6A /* NotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452152EC222D6D05005CEA6A /* NotificationCenter.swift */; };
 		45404CAE2226560200DF7BAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45404CAD2226560200DF7BAA /* AppDelegate.swift */; };
 		45404CB2222659D500DF7BAA /* DoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45404CB1222659D500DF7BAA /* DoneTextField.swift */; };
 		45404CB822265AD400DF7BAA /* countDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45404CB322265AD300DF7BAA /* countDownViewController.swift */; };
@@ -31,6 +32,7 @@
 		4510E57F21EA471F008853F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		452152E6222D2A0F005CEA6A /* MainViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainViewController.storyboard; sourceTree = "<group>"; };
 		452152E9222D2D06005CEA6A /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
+		452152EC222D6D05005CEA6A /* NotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenter.swift; sourceTree = "<group>"; };
 		45404CAD2226560200DF7BAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45404CB1222659D500DF7BAA /* DoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTextField.swift; sourceTree = "<group>"; };
 		45404CB322265AD300DF7BAA /* countDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = countDownViewController.swift; path = /Users/hayato_okuma/workspace/ChargeMe/ChargeMe/countDownViewController.swift; sourceTree = "<absolute>"; };
@@ -85,6 +87,7 @@
 				4510E57F21EA471F008853F4 /* Info.plist */,
 				45404CAD2226560200DF7BAA /* AppDelegate.swift */,
 				45404CBE22265B8A00DF7BAA /* AlertCollectionViewCell.swift */,
+				452152EB222D6CD3005CEA6A /* Notifications */,
 				45404CBD22265B8A00DF7BAA /* MainViewController.swift */,
 				45404CC12226752A00DF7BAA /* SettingViewController.swift */,
 			);
@@ -97,6 +100,14 @@
 				452152E9222D2D06005CEA6A /* UserDefaults+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		452152EB222D6CD3005CEA6A /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				452152EC222D6D05005CEA6A /* NotificationCenter.swift */,
+			);
+			path = Notifications;
 			sourceTree = "<group>";
 		};
 		45404CB02226598600DF7BAA /* Common */ = {
@@ -182,6 +193,7 @@
 			files = (
 				45404CBA22265AD400DF7BAA /* SettingSleepViewController.swift in Sources */,
 				45404CB822265AD400DF7BAA /* countDownViewController.swift in Sources */,
+				452152ED222D6D05005CEA6A /* NotificationCenter.swift in Sources */,
 				45404CB922265AD400DF7BAA /* TimeCollectionViewCell.swift in Sources */,
 				45404CAE2226560200DF7BAA /* AppDelegate.swift in Sources */,
 				45404CB2222659D500DF7BAA /* DoneTextField.swift in Sources */,
