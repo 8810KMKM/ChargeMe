@@ -13,10 +13,10 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var alertCount: UILabel!
     
-    
+    var currentTime = CurrentTime()
     
     override func viewDidLoad() {
-        alertPermission()
+        setUpNotification()
         super.viewDidLoad()
         alertCount.text = UserDefaults.sleepTime
         //countDown()
@@ -24,6 +24,9 @@ class MainViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func updateTime(_ time:String) {
+        
+    }
 
     /*
     // MARK: - Navigation

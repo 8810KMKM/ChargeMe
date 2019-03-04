@@ -33,7 +33,7 @@ func setUpNotification() {
     
     notificationTime.hour = 23
     notificationTime.minute = 45
-    trigger = UNCalendarNotificationTrigger(dateMatching: notificationTime, repeats: false)
+    trigger = UNCalendarNotificationTrigger(dateMatching: notificationTime, repeats: true)
     
     let content = UNMutableNotificationContent()
     
