@@ -16,9 +16,10 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        alertCount.text = UserDefaults.standard.object(forKey: "sleepTime") as? String
+        //alertCount.text = UserDefaults.standard.object(forKey: "sleepTime") as? String
+        alertCount.text = "23:20"
         //countDown()
-        clock()
+        //clock()
         // Do any additional setup after loading the view.
     }
     
