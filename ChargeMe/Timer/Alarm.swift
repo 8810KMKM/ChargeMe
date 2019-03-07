@@ -41,6 +41,8 @@ class Alarm{
                 print("Cloud not load file")
             }
             audioPlayer?.play()
+            Thread.sleep(forTimeInterval: 30)
+            audioPlayer?.stop()
         }
     }
     
