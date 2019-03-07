@@ -7,22 +7,26 @@
 //
 
 import UIKit
+import UserNotifications
 
 class MainViewController: UIViewController {
 
     @IBOutlet weak var alertCount: UILabel!
     
-    
+    var currentTime = CurrentTime()
     
     override func viewDidLoad() {
+        setUpNotification()
         super.viewDidLoad()
-        //alertCount.text = UserDefaults.standard.object(forKey: "sleepTime") as? String
-        alertCount.text = "23:20"
+        alertCount.text = UserDefaults.sleepTime
         //countDown()
         //clock()
         // Do any additional setup after loading the view.
     }
     
+    func updateTime(_ time:String) {
+        
+    }
 
     /*
     // MARK: - Navigation
@@ -35,26 +39,24 @@ class MainViewController: UIViewController {
     */
     
     @objc func alertTimeIsNow(_ sender: Timer) -> Bool {
-        let userDefault = UserDefaults.standard
         let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "ja")
         dateFormatter.timeStyle = .short
         dateFormatter.dateFormat = "HH:mm"
         let now = Date()
-        let alertTime = dateFormatter.date(from: userDefault.object(forKey: "sleepTime") as! String)
-        
-        if alertTime! < now {
+        let sleepTime = UserDefaults.sleepTime
+        if sleepTime.isEmpty {
+            return false // 空だとfalse
+        }
+        guard let alertTime = dateFormatter.date(from: sleepTime) else { return  false }
+        if alertTime < now {
             print("hoge")
             print(dateFormatter.string(from: now))
-            print(dateFormatter.string(from: alertTime!))
+            print(dateFormatter.string(from: alertTime))
         } else {
             print("fuga")
             
         }
-        
-        
-        
-        
         return true
     }
     
@@ -90,8 +92,9 @@ class MainViewController: UIViewController {
         
         print(diff)
     }
-
 }
+
+
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -99,15 +102,15 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let userDefaults = UserDefaults.standard
         if indexPath.row == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "timeCell", for: indexPath) as! TimeCollectionViewCell
-            cell.updateCell(time: userDefaults.object(forKey: "sleepTime") as! String,
-                            meridian: userDefaults.object(forKey: "sleepMeridian") as! String )
+            cell.updateCell(time: UserDefaults.sleepTime,
+                            meridian: "")
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "alertCell", for: indexPath) as! AlertCollectionViewCell
-            cell.updateCell(timing: userDefaults.object(forKey: "alertTiming") as! String)
+            print(UserDefaults.alertTiming)
+            cell.updateCell(timing: UserDefaults.alertTiming)
             return cell
             
         }

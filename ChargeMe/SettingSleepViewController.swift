@@ -16,6 +16,8 @@ class SettingSleepViewController: UIViewController, UITextFieldDelegate {
     var sleepTime = ""
     var sleepMeridiem = ""
     
+    let alerm = Alarm()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,15 +30,20 @@ class SettingSleepViewController: UIViewController, UITextFieldDelegate {
         sleepTextField.delegate = self
         sleepTime = self.dateToString(date: myDatePicker.date)
         sleepTextField.text = sleepTime
-        UserDefaults.standard.set(sleepTime, forKey: "sleepTime")
+        UserDefaults.sleepTime = sleepTime
         // Do any additional setup after loading the view.
         
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if self.alerm.chargeTimer != nil {
+            self.alerm.stopTimer()
+        }
+    }
+    
     @objc func done() {
-        UserDefaults.standard.set(sleepTime, forKey: "sleepTime")
-        UserDefaults.standard.set(sleepMeridiem, forKey: "sleepMeridian")
-        performSegue(withIdentifier: "sleepSegue", sender: nil)
+//        UserDefaults.sleepTime = sleepTime
+//        performSegue(withIdentifier: "sleepSegue", sender: nil)
     }
     
     @objc func changedDateEvent(sender: Any) {
@@ -63,7 +70,9 @@ class SettingSleepViewController: UIViewController, UITextFieldDelegate {
     
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        UserDefaults.standard.set(self.sleepTime, forKey: "sleepTime")
+        alerm.selectedAlertTime = self.myDatePicker.date
+        alerm.runTimer()
+        UserDefaults.sleepTime = self.sleepTime
 //        UserDefaults.standard.set(self.sleepMeridiem, forKey: "sleepMeridian")
 //        performSegue(withIdentifier: "sleepSegue", sender: nil)
     }

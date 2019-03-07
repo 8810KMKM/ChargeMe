@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="MWK-eq-q1b">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Setting Sleep View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="FirstViewController" id="BYZ-38-t0r" customClass="SettingSleepViewController" customModule="ChargeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2b-ud-66e" customClass="DoneTextField" customModule="ChargeMe" customModuleProvider="target">
+                                <rect key="frame" x="64" y="293.5" width="247" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="i96-YH-EWJ"/>
+                                </constraints>
+                                <color key="textColor" name="Main"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="64"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="JtQ-bZ-CZh"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたが寝る時間は?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTb-mc-MfZ">
+                                <rect key="frame" x="68" y="236.5" width="239.5" height="25"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="Main"/>
+                        <constraints>
+                            <constraint firstItem="x2b-ud-66e" firstAttribute="top" secondItem="aTb-mc-MfZ" secondAttribute="bottom" constant="32" id="7fn-au-VPv"/>
+                            <constraint firstItem="aTb-mc-MfZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Oq-b9-xtb"/>
+                            <constraint firstItem="x2b-ud-66e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8xU-sF-c3D"/>
+                            <constraint firstItem="x2b-ud-66e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="DhI-nw-6U7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="x2b-ud-66e" secondAttribute="trailing" constant="64" id="MMI-D8-kko"/>
+                            <constraint firstItem="x2b-ud-66e" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="WzY-Nb-nAS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="sleepTextField" destination="x2b-ud-66e" id="oGU-NR-5hT"/>
+                        <segue destination="d1K-2H-8nP" kind="show" identifier="sleepSegue" id="Arx-Ve-6pT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53.600000000000001" y="26.53673163418291"/>
+        </scene>
+        <!--Set Timing View Controller-->
+        <scene sceneID="GG8-hn-1GK">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="d1K-2H-8nP" customClass="SetTimingViewController" customModule="ChargeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fb4-DI-niA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="通知のタイミング" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HrC-xp-BVq">
+                                <rect key="frame" x="87.5" y="236.5" width="200" height="25"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jww-Ak-Hkg" customClass="DoneTextField" customModule="ChargeMe" customModuleProvider="target">
+                                <rect key="frame" x="80" y="293.5" width="144" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="144" id="1Gn-bE-LqZ"/>
+                                    <constraint firstAttribute="height" constant="80" id="2Pm-Z6-IBM"/>
+                                </constraints>
+                                <color key="textColor" name="Main"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="64"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="あなたが寝る前 このデバイスが充電されていなければ通知します。" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jyt-hY-56b">
+                                <rect key="frame" x="49" y="113.5" width="277" height="67"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="67" id="2Jj-Qa-zQk"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="67" id="5GA-nJ-Ago"/>
+                                    <constraint firstAttribute="width" constant="277" id="AEZ-Uv-M94"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="274" id="PJs-jS-DpH"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="分前" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ChJ-ap-w4C">
+                                <rect key="frame" x="232" y="321" width="50" height="25"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" name="Main"/>
+                        <constraints>
+                            <constraint firstItem="jww-Ak-Hkg" firstAttribute="top" secondItem="HrC-xp-BVq" secondAttribute="bottom" constant="32" id="EO7-VM-ls4"/>
+                            <constraint firstItem="jww-Ak-Hkg" firstAttribute="centerY" secondItem="Fb4-DI-niA" secondAttribute="centerY" id="LdH-NH-Qyy"/>
+                            <constraint firstItem="HrC-xp-BVq" firstAttribute="centerX" secondItem="Fb4-DI-niA" secondAttribute="centerX" id="PBE-Gk-iPS"/>
+                            <constraint firstItem="HrC-xp-BVq" firstAttribute="top" secondItem="jyt-hY-56b" secondAttribute="bottom" constant="56" id="QS8-g1-fvh"/>
+                            <constraint firstItem="HrC-xp-BVq" firstAttribute="centerX" secondItem="Fb4-DI-niA" secondAttribute="centerX" id="UAd-3k-muO"/>
+                            <constraint firstItem="jww-Ak-Hkg" firstAttribute="leading" secondItem="pxC-Pb-nc3" secondAttribute="leading" constant="80" id="Uj4-K2-Gf7"/>
+                            <constraint firstItem="ChJ-ap-w4C" firstAttribute="leading" secondItem="jww-Ak-Hkg" secondAttribute="trailing" constant="8" id="cH2-UY-h4U"/>
+                            <constraint firstItem="ChJ-ap-w4C" firstAttribute="centerY" secondItem="Fb4-DI-niA" secondAttribute="centerY" id="e4l-vw-8P4"/>
+                            <constraint firstItem="jyt-hY-56b" firstAttribute="centerX" secondItem="Fb4-DI-niA" secondAttribute="centerX" id="lmk-sZ-UnN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pxC-Pb-nc3"/>
+                    </view>
+                    <connections>
+                        <outlet property="timingTextField" destination="jww-Ak-Hkg" id="aW3-CL-GjO"/>
+                        <segue destination="saS-eH-Xrr" kind="show" identifier="timingSegue" id="tt0-6B-bFK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5dR-h9-PtQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760.79999999999995" y="26.53673163418291"/>
+        </scene>
+        <!--Setting View Controller-->
+        <scene sceneID="j63-ll-Tpw">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="MWK-eq-q1b" customClass="SettingViewController" customModule="ChargeMe" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4bD-Ls-aeM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-654" y="27"/>
+        </scene>
+        <!--MainViewController-->
+        <scene sceneID="1Ki-ZR-RRp">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MainViewController" id="saS-eH-Xrr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DgA-JW-8wD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2055" y="12"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Main">
+            <color red="0.63529411764705879" green="0.59215686274509804" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
