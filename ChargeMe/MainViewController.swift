@@ -14,11 +14,13 @@ class MainViewController: UIViewController {
     @IBOutlet weak var alertCount: UILabel!
     
     var currentTime = CurrentTime()
+    var batteryState = BatteryState()
     
     override func viewDidLoad() {
         setUpNotification()
         super.viewDidLoad()
-        alertCount.text = UserDefaults.sleepTime
+        UIDevice.current.isBatteryMonitoringEnabled = true
+//        alertCount.text = UserDefaults.sleepTime
         //countDown()
         //clock()
         // Do any additional setup after loading the view.
