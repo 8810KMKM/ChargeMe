@@ -8,10 +8,21 @@
 
 import UIKit
 
+
+
 class BatteryState {
     
     init() {
         UIDevice.current.isBatteryMonitoringEnabled = true
+    }
+    
+    func isCharging()-> Bool {
+        let currentBatteryState = UIDevice.current.batteryState
+        if currentBatteryState == UIDevice.BatteryState.charging {
+            return true
+        } else {
+            return false
+        }
     }
     
     func getBatteryState()-> String {
