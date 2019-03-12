@@ -9,7 +9,6 @@
 import UIKit
 
 
-
 class BatteryState {
     var chargeTimer: Timer?
     
@@ -18,41 +17,12 @@ class BatteryState {
 //        runTimer()
     }
     
-    func runTimer() {
-        chargeTimer = Timer.scheduledTimer(
-            timeInterval: 1,
-            target: self,
-            selector: #selector(updateColor),
-            userInfo: nil,
-            repeats: true)
-    }
-    
-    @objc private func updateColor() {
-        print("hoge")
-    }
-    
     func isCharging()-> Bool {
         let currentBatteryState = UIDevice.current.batteryState
         if currentBatteryState == UIDevice.BatteryState.charging {
             return true
         } else {
             return false
-        }
-    }
-    
-    func getBatteryState()-> String {
-        
-        switch UIDevice.current.batteryState {
-        case UIDevice.BatteryState.full:
-            return "full"
-        case UIDevice.BatteryState.charging:
-            return "charging"
-        case UIDevice.BatteryState.unplugged:
-            return "unplugged"
-        case UIDevice.BatteryState.unknown:
-            return  "unknown"
-        default:
-            return ""
         }
     }
 }

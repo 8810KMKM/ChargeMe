@@ -29,7 +29,6 @@ class CurrentTime{
         df.timeZone = TimeZone.current
         let timezoneDate = df.string(from: Date())
         currentTime = timezoneDate
-//        print(currentTime!)
         delegate?.updateTime(currentTime!)
     }
     

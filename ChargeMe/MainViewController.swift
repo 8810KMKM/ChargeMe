@@ -24,86 +24,11 @@ class MainViewController: UIViewController {
         alarm.runTimer()
         
         alertCount.text = UserDefaults.sleepTime
-        //countDown()
-        //clock()
-        // Do any additional setup after loading the view.
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        if self.alarm.chargeTimer != nil {
-//            self.alarm.stopTimer()
-//        }
-//    }
+    func updateTime(_ time:String) { }
     
-    func updateTime(_ time:String) {
-        
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    @objc func alertTimeIsNow(_ sender: Timer) -> Bool {
-        let dateFormatter: DateFormatter = DateFormatter()
-        dateFormatter.locale = Locale(identifier: "ja")
-        dateFormatter.timeStyle = .short
-        dateFormatter.dateFormat = "HH:mm"
-        let now = Date()
-        let sleepTime = UserDefaults.sleepTime
-        if sleepTime.isEmpty {
-            return false // 空だとfalse
-        }
-        guard let alertTime = dateFormatter.date(from: sleepTime) else { return  false }
-        if alertTime < now {
-            print("hoge")
-            print(dateFormatter.string(from: now))
-            print(dateFormatter.string(from: alertTime))
-        } else {
-            print("fuga")
-            
-        }
-        return true
-    }
-    
-    func clock() {
-        let timer = Timer.scheduledTimer(
-                        timeInterval: 1.0,
-                        target: self,
-                        selector: #selector(alertTimeIsNow(_:)),
-                        userInfo: nil,
-                        repeats: true)
-        timer.fire()
-    }
-    
-    @objc func getNowTime(_ sender: Timer) {
-        
-        let dateFormatter: DateFormatter = DateFormatter()
-        let now = Date()
-        
-        dateFormatter.locale = Locale(identifier: "ja")
-        dateFormatter.dateStyle = .none
-        dateFormatter.timeStyle = .medium
-        alertCount.text = dateFormatter.string(from: now)
-    }
-    
-    func countDown() {
-        let dateFormatter: DateFormatter = DateFormatter()
-        let now = Date()
-        let userDefaults = UserDefaults.standard
-        let sleepTime = dateFormatter.date(from: userDefaults.object(forKey: "sleepTime") as! String)
-        
-        let diff = CFDateGetTimeIntervalSinceDate(now as CFDate, sleepTime! as CFDate)
-        
-        
-        print(diff)
-    }
 }
-
 
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {

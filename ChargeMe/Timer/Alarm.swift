@@ -76,8 +76,7 @@ class Alarm{
     }
     
     func stopTimerWithCharging() {
-        print(batteryState.getBatteryState())
-        if batteryState.getBatteryState() == "" {
+        if batteryState.isCharging() {
             chargeTimer?.invalidate()
             chargeTimer = nil
             audioPlayer?.stop()

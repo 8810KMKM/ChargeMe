@@ -29,15 +29,9 @@ class SettingSleepViewController: UIViewController, UITextFieldDelegate {
         sleepTime = self.dateToString(date: myDatePicker.date)
         sleepTextField.text = sleepTime
         UserDefaults.sleepTime = sleepTime
-        // Do any additional setup after loading the view.
-        
     }
     
-    
-    
     @objc func done() {
-//        UserDefaults.sleepTime = sleepTime
-//        performSegue(withIdentifier: "sleepSegue", sender: nil)
     }
     
     @objc func changedDateEvent(sender: Any) {
@@ -61,12 +55,9 @@ class SettingSleepViewController: UIViewController, UITextFieldDelegate {
         sleepTextField.text = dateToString(date: Date())
         return true
     }
-    
 
     func textFieldDidEndEditing(_ textField: UITextField) {
         UserDefaults.sleepTime = self.sleepTime
         UserDefaults.sleepTimeByDate = self.myDatePicker.date
-//        UserDefaults.standard.set(self.sleepMeridiem, forKey: "sleepMeridian")
-//        performSegue(withIdentifier: "sleepSegue", sender: nil)
     }
 }
