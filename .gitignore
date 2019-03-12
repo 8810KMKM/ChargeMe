@@ -78,3 +78,5 @@ iOSInjectionProject/
 
 *.DS_Store
 *.m4a
+*.swp
+UserInterfaceState.xcuserstate

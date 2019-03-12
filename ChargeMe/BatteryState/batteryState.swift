@@ -9,27 +9,24 @@
 import UIKit
 
 class BatteryState {
+    
+    init() {
+        UIDevice.current.isBatteryMonitoringEnabled = true
+    }
+    
     func getBatteryState()-> String {
-        print(UIDevice.current.batteryState)
-        
-        var text = ""
         
         switch UIDevice.current.batteryState {
         case UIDevice.BatteryState.full:
-            text =  "full"
-            break
+            return "full"
         case UIDevice.BatteryState.charging:
-            text = "charging"
-            break
+            return "charging"
         case UIDevice.BatteryState.unplugged:
-            text = "unplugged"
-            break
+            return "unplugged"
         case UIDevice.BatteryState.unknown:
-            text = "unknown"
-            break
+            return  "unknown"
         default:
-            break
+            return ""
         }
-        return text
     }
 }
