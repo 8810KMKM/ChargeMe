@@ -37,7 +37,7 @@ class Alarm{
             seconds -= 1
         } else {
             audioPlayer?.play()
-            Thread.sleep(forTimeInterval: 5)
+//            Thread.sleep(forTimeInterval: 1)
             self.stopTimerWithCharging()
 //            Thread.sleep(forTimeInterval: 30)
 //            audioPlayer?.stop()
@@ -45,7 +45,7 @@ class Alarm{
     }
     
     private func soundSetUp() {
-        let soundFilePath = Bundle.main.path(forResource: "03 ABOAB", ofType: "m4a")!
+        let soundFilePath = Bundle.main.path(forResource: "warning1", ofType: "mp3")!
         let sound:URL = URL(fileURLWithPath: soundFilePath)
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: sound, fileTypeHint: nil)

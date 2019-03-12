@@ -17,6 +17,7 @@
 		452152F2222D8EAC005CEA6A /* Alarm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452152F1222D8EAC005CEA6A /* Alarm.swift */; };
 		452152F4222D9BC1005CEA6A /* 03 ABOAB.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 452152F3222D9BC1005CEA6A /* 03 ABOAB.m4a */; };
 		453265BD2237D9DC00033BA4 /* batteryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453265BC2237D9DC00033BA4 /* batteryState.swift */; };
+		453265BF223809BE00033BA4 /* warning1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 453265BE223809BE00033BA4 /* warning1.mp3 */; };
 		45404CAE2226560200DF7BAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45404CAD2226560200DF7BAA /* AppDelegate.swift */; };
 		45404CB2222659D500DF7BAA /* DoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45404CB1222659D500DF7BAA /* DoneTextField.swift */; };
 		45404CB822265AD400DF7BAA /* countDownViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45404CB322265AD300DF7BAA /* countDownViewController.swift */; };
@@ -41,6 +42,7 @@
 		452152F1222D8EAC005CEA6A /* Alarm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alarm.swift; sourceTree = "<group>"; };
 		452152F3222D9BC1005CEA6A /* 03 ABOAB.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; name = "03 ABOAB.m4a"; path = "ChargeMe/03 ABOAB.m4a"; sourceTree = SOURCE_ROOT; };
 		453265BC2237D9DC00033BA4 /* batteryState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = batteryState.swift; sourceTree = "<group>"; };
+		453265BE223809BE00033BA4 /* warning1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = warning1.mp3; path = ../../../../Downloads/warning1.mp3; sourceTree = "<group>"; };
 		45404CAD2226560200DF7BAA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45404CB1222659D500DF7BAA /* DoneTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoneTextField.swift; sourceTree = "<group>"; };
 		45404CB322265AD300DF7BAA /* countDownViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = countDownViewController.swift; path = /Users/hayato_okuma/workspace/ChargeMe/ChargeMe/countDownViewController.swift; sourceTree = "<absolute>"; };
@@ -122,6 +124,7 @@
 		452152EE222D8200005CEA6A /* Timer */ = {
 			isa = PBXGroup;
 			children = (
+				453265BE223809BE00033BA4 /* warning1.mp3 */,
 				452152F3222D9BC1005CEA6A /* 03 ABOAB.m4a */,
 				452152EF222D8225005CEA6A /* CurrentTime.swift */,
 				452152F1222D8EAC005CEA6A /* Alarm.swift */,
@@ -214,6 +217,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				452152E7222D2A0F005CEA6A /* MainViewController.storyboard in Resources */,
+				453265BF223809BE00033BA4 /* warning1.mp3 in Resources */,
 				452152F4222D9BC1005CEA6A /* 03 ABOAB.m4a in Resources */,
 				4510E57E21EA471F008853F4 /* LaunchScreen.storyboard in Resources */,
 				4510E57B21EA471F008853F4 /* Assets.xcassets in Resources */,
