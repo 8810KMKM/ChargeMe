@@ -14,20 +14,30 @@ class MainViewController: UIViewController {
     @IBOutlet weak var alertCount: UILabel!
     
     var currentTime = CurrentTime()
+    let alarm = Alarm()
     
     override func viewDidLoad() {
         setUpNotification()
         super.viewDidLoad()
+        
+        alarm.selectedAlertTime = UserDefaults.sleepTimeByDate
+        alarm.runTimer()
+        
         alertCount.text = UserDefaults.sleepTime
         //countDown()
         //clock()
         // Do any additional setup after loading the view.
     }
     
+//    override func viewDidAppear(_ animated: Bool) {
+//        if self.alarm.chargeTimer != nil {
+//            self.alarm.stopTimer()
+//        }
+//    }
+    
     func updateTime(_ time:String) {
         
     }
-
     /*
     // MARK: - Navigation
 
