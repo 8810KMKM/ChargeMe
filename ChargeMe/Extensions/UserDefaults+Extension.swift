@@ -11,6 +11,7 @@ import UIKit
 private struct UserDefaultsKeys {
     static let sleepTime = "sleepTime"
     static let alertTiming =  "alertTiming"
+    static let sleepTimeByDate = "sleepTimeByDate"
 }
 
 extension UserDefaults {
@@ -29,6 +30,11 @@ extension UserDefaults {
             
         }
         set { self.standard.set(newValue, forKey: UserDefaultsKeys.alertTiming) }
+    }
+    
+    static var sleepTimeByDate: Date {
+        get { return self.standard.object(forKey: UserDefaultsKeys.sleepTimeByDate) as! Date }
+        set { self.standard.set(newValue, forKey: UserDefaultsKeys.sleepTimeByDate) }
     }
     
 }
