@@ -15,7 +15,7 @@ class BatteryState {
     
     init() {
         UIDevice.current.isBatteryMonitoringEnabled = true
-        runTimer()
+//        runTimer()
     }
     
     func runTimer() {

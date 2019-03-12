@@ -70,9 +70,12 @@ class SettingSleepViewController: UIViewController, UITextFieldDelegate {
     
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        alerm.selectedAlertTime = self.myDatePicker.date
-        alerm.runTimer()
+//        alerm.selectedAlertTime = self.myDatePicker.date
+        
         UserDefaults.sleepTime = self.sleepTime
+        UserDefaults.sleepTimeByDate = self.myDatePicker.date
+        alerm.selectedAlertTime = UserDefaults.sleepTimeByDate
+        alerm.runTimer()
 //        UserDefaults.standard.set(self.sleepMeridiem, forKey: "sleepMeridian")
 //        performSegue(withIdentifier: "sleepSegue", sender: nil)
     }
