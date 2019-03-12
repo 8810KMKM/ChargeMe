@@ -18,7 +18,7 @@ class Alarm{
     
     init() {
         batteryState = BatteryState()
-        soundSetUp()
+        self.soundSetUp()
     }
     
     func runTimer() {
@@ -77,7 +77,7 @@ class Alarm{
     
     func stopTimerWithCharging() {
         print(batteryState.getBatteryState())
-        if batteryState.getBatteryState() == "unknow" {
+        if batteryState.getBatteryState() == "" {
             chargeTimer?.invalidate()
             chargeTimer = nil
             audioPlayer?.stop()
