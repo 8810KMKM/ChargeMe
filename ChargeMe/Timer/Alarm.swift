@@ -14,7 +14,12 @@ class Alarm{
     var audioPlayer: AVAudioPlayer?
     var chargeTimer: Timer?
     var seconds = 0
-    var batteryState = BatteryState()
+    var batteryState: BatteryState
+    
+    init() {
+        batteryState = BatteryState()
+        soundSetUp()
+    }
     
     func runTimer() {
         seconds = calculateInterval(alertTime: selectedAlertTime!)
@@ -31,18 +36,21 @@ class Alarm{
             print(seconds)
             seconds -= 1
         } else {
-            let soundFilePath = Bundle.main.path(forResource: "03 ABOAB", ofType: "m4a")!
-            let sound:URL = URL(fileURLWithPath: soundFilePath)
-            do {
-                audioPlayer = try AVAudioPlayer(contentsOf: sound, fileTypeHint: nil)
-            } catch {
-                print("Cloud not load file")
-            }
             audioPlayer?.play()
             Thread.sleep(forTimeInterval: 5)
             self.stopTimerWithCharging()
 //            Thread.sleep(forTimeInterval: 30)
 //            audioPlayer?.stop()
+        }
+    }
+    
+    private func soundSetUp() {
+        let soundFilePath = Bundle.main.path(forResource: "03 ABOAB", ofType: "m4a")!
+        let sound:URL = URL(fileURLWithPath: soundFilePath)
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: sound, fileTypeHint: nil)
+        } catch {
+            print("Cloud not load file")
         }
     }
     
