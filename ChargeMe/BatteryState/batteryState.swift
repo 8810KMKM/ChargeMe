@@ -11,9 +11,24 @@ import UIKit
 
 
 class BatteryState {
+    var chargeTimer: Timer?
     
     init() {
         UIDevice.current.isBatteryMonitoringEnabled = true
+        runTimer()
+    }
+    
+    func runTimer() {
+        chargeTimer = Timer.scheduledTimer(
+            timeInterval: 1,
+            target: self,
+            selector: #selector(updateColor),
+            userInfo: nil,
+            repeats: true)
+    }
+    
+    @objc private func updateColor() {
+        print("hoge")
     }
     
     func isCharging()-> Bool {
