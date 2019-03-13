@@ -15,6 +15,7 @@ class Alarm{
     var chargeTimer: Timer?
     var seconds = 0
     var batteryState: BatteryState
+    var soundflag = 1
     
     init() {
         batteryState = BatteryState()
@@ -35,11 +36,12 @@ class Alarm{
         if seconds != 0 {
             print(seconds)
             seconds -= 1
-        } else if batteryState.isNeededToCharge() {
+        } else if batteryState.isNeededToCharge() && soundflag == 1 {
             audioPlayer?.play()
             self.stopTimerWithCharging()
         } else {
             seconds = calculateInterval(alertTime: selectedAlertTime!)
+            soundflag = 1
         }
     }
     
@@ -71,14 +73,16 @@ class Alarm{
             chargeTimer = nil
         } else {
             audioPlayer?.stop()
+            soundflag = 0
         }
     }
     
     func stopTimerWithCharging() {
         if batteryState.isCharging() {
-            chargeTimer?.invalidate()
-            chargeTimer = nil
+//            chargeTimer?.invalidate()
+//            chargeTimer = nil
             audioPlayer?.stop()
+            soundflag = 0
         }
     }
 }
