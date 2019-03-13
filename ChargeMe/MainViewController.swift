@@ -25,7 +25,9 @@ class MainViewController: UIViewController {
         alarm.selectedAlertTime = UserDefaults.sleepTimeByDate
         alarm.runTimer()
         
-        alertCount.text = UserDefaults.sleepTime
+        alertCount.text = UserDefaults.sleepTime        
+        alarm.batteryState.updateBsBar(mainView: mainBar)
+        
     }
     
     func updateTime(_ time:String) { }
