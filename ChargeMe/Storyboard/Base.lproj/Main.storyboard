@@ -140,6 +140,86 @@
             </objects>
             <point key="canvasLocation" x="2055" y="12"/>
         </scene>
+        <!--Setting Battery View Controller-->
+        <scene sceneID="pSj-6d-iET">
+            <objects>
+                <viewController storyboardIdentifier="SecondsViewController" id="nVu-gm-XSe" customClass="SettingBatteryViewController" customModule="ChargeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sNn-sU-9zs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZkY-zA-dOL" customClass="DoneTextField" customModule="ChargeMe" customModuleProvider="target">
+                                <rect key="frame" x="96" y="293.5" width="144" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="3o7-VL-j9p"/>
+                                    <constraint firstAttribute="width" constant="144" id="QIE-gk-wa3"/>
+                                </constraints>
+                                <color key="textColor" name="Main"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="64"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="あなたが寝る前, 以下の条件が成り立つと通知します." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AZ5-1t-m3C">
+                                <rect key="frame" x="67.5" y="69.5" width="240" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="WJ0-zJ-mhn"/>
+                                    <constraint firstAttribute="height" constant="56" id="o0a-1M-nIs"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENm-Rb-NTI">
+                                <rect key="frame" x="256" y="321" width="23" height="25"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="2. 充電残量が, 今から指定する充電以下である." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YDS-d8-sSm">
+                                <rect key="frame" x="-3" y="205.5" width="381" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="381" id="1ru-96-8dx"/>
+                                    <constraint firstAttribute="height" constant="40" id="gbY-54-Dtb"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="1. このデバイスが充電されていない." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IOR-Qd-yMK">
+                                <rect key="frame" x="-3" y="157.5" width="381" height="40"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="381" id="dVc-2F-K0j"/>
+                                    <constraint firstAttribute="height" constant="40" id="yh1-8D-42S"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" name="Main"/>
+                        <constraints>
+                            <constraint firstItem="ZkY-zA-dOL" firstAttribute="centerY" secondItem="sNn-sU-9zs" secondAttribute="centerY" id="2JJ-zs-Q27"/>
+                            <constraint firstItem="IOR-Qd-yMK" firstAttribute="centerX" secondItem="sNn-sU-9zs" secondAttribute="centerX" id="8H7-9J-v7K"/>
+                            <constraint firstItem="ZkY-zA-dOL" firstAttribute="top" secondItem="YDS-d8-sSm" secondAttribute="bottom" constant="48" id="BlS-XG-4qP"/>
+                            <constraint firstItem="ENm-Rb-NTI" firstAttribute="leading" secondItem="ZkY-zA-dOL" secondAttribute="trailing" constant="16" id="HzG-QU-33J"/>
+                            <constraint firstItem="ENm-Rb-NTI" firstAttribute="centerY" secondItem="sNn-sU-9zs" secondAttribute="centerY" id="Nxz-Tl-UKI"/>
+                            <constraint firstItem="YDS-d8-sSm" firstAttribute="top" secondItem="IOR-Qd-yMK" secondAttribute="bottom" constant="8" id="WgB-9t-xcN"/>
+                            <constraint firstItem="ZkY-zA-dOL" firstAttribute="leading" secondItem="Jwy-AN-J9m" secondAttribute="leading" constant="96" id="XrC-Bs-KqG"/>
+                            <constraint firstItem="AZ5-1t-m3C" firstAttribute="centerX" secondItem="sNn-sU-9zs" secondAttribute="centerX" id="Zmc-1O-Nom"/>
+                            <constraint firstItem="IOR-Qd-yMK" firstAttribute="top" secondItem="AZ5-1t-m3C" secondAttribute="bottom" constant="32" id="ak2-3X-RsV"/>
+                            <constraint firstItem="YDS-d8-sSm" firstAttribute="centerX" secondItem="sNn-sU-9zs" secondAttribute="centerX" id="nFX-1o-KOd"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jwy-AN-J9m"/>
+                    </view>
+                    <connections>
+                        <outlet property="timingTextField" destination="ZkY-zA-dOL" id="CKa-HZ-tvW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Lg-wt-M8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760.79999999999995" y="738.98050974512751"/>
+        </scene>
     </scenes>
     <resources>
         <namedColor name="Main">
