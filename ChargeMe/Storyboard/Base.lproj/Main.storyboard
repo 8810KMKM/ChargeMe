@@ -51,7 +51,7 @@
                     </view>
                     <connections>
                         <outlet property="sleepTextField" destination="x2b-ud-66e" id="oGU-NR-5hT"/>
-                        <segue destination="d1K-2H-8nP" kind="show" identifier="sleepSegue" id="Arx-Ve-6pT"/>
+                        <segue destination="nVu-gm-XSe" kind="show" id="h3c-3g-isY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -149,7 +149,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZkY-zA-dOL" customClass="DoneTextField" customModule="ChargeMe" customModuleProvider="target">
-                                <rect key="frame" x="96" y="293.5" width="144" height="80"/>
+                                <rect key="frame" x="104" y="293.5" width="144" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="3o7-VL-j9p"/>
                                     <constraint firstAttribute="width" constant="144" id="QIE-gk-wa3"/>
@@ -159,7 +159,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="あなたが寝る前, 以下の条件が成り立つと通知します." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AZ5-1t-m3C">
-                                <rect key="frame" x="67.5" y="69.5" width="240" height="56"/>
+                                <rect key="frame" x="67.5" y="77.5" width="240" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="WJ0-zJ-mhn"/>
                                     <constraint firstAttribute="height" constant="56" id="o0a-1M-nIs"/>
@@ -169,7 +169,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENm-Rb-NTI">
-                                <rect key="frame" x="256" y="321" width="23" height="25"/>
+                                <rect key="frame" x="264" y="321" width="23" height="25"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -205,9 +205,9 @@
                             <constraint firstItem="ENm-Rb-NTI" firstAttribute="leading" secondItem="ZkY-zA-dOL" secondAttribute="trailing" constant="16" id="HzG-QU-33J"/>
                             <constraint firstItem="ENm-Rb-NTI" firstAttribute="centerY" secondItem="sNn-sU-9zs" secondAttribute="centerY" id="Nxz-Tl-UKI"/>
                             <constraint firstItem="YDS-d8-sSm" firstAttribute="top" secondItem="IOR-Qd-yMK" secondAttribute="bottom" constant="8" id="WgB-9t-xcN"/>
-                            <constraint firstItem="ZkY-zA-dOL" firstAttribute="leading" secondItem="Jwy-AN-J9m" secondAttribute="leading" constant="96" id="XrC-Bs-KqG"/>
+                            <constraint firstItem="ZkY-zA-dOL" firstAttribute="leading" secondItem="Jwy-AN-J9m" secondAttribute="leading" constant="104" id="XrC-Bs-KqG"/>
                             <constraint firstItem="AZ5-1t-m3C" firstAttribute="centerX" secondItem="sNn-sU-9zs" secondAttribute="centerX" id="Zmc-1O-Nom"/>
-                            <constraint firstItem="IOR-Qd-yMK" firstAttribute="top" secondItem="AZ5-1t-m3C" secondAttribute="bottom" constant="32" id="ak2-3X-RsV"/>
+                            <constraint firstItem="IOR-Qd-yMK" firstAttribute="top" secondItem="AZ5-1t-m3C" secondAttribute="bottom" constant="24" id="ak2-3X-RsV"/>
                             <constraint firstItem="YDS-d8-sSm" firstAttribute="centerX" secondItem="sNn-sU-9zs" secondAttribute="centerX" id="nFX-1o-KOd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jwy-AN-J9m"/>

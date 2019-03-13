@@ -23,7 +23,7 @@ class SettingViewController: UIPageViewController {
         pageControl.isUserInteractionEnabled = false
         self.view.addSubview(pageControl)
         let first = self.storyboard!.instantiateViewController(withIdentifier: "FirstViewController") as! SettingSleepViewController
-        let second = storyboard!.instantiateViewController(withIdentifier: "SecondViewController") as! SetTimingViewController
+        let second = storyboard!.instantiateViewController(withIdentifier: "SecondsViewController") as! SettingBatteryViewController
         self.allViewControllers = [first, second]
         self.setViewControllers([first], direction: .forward, animated: true, completion: nil)
     }
