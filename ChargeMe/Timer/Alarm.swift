@@ -8,6 +8,7 @@
 
 import Foundation
 import AVFoundation
+import AudioToolbox
 
 class Alarm{
     var selectedAlertTime: Date?
@@ -38,6 +39,7 @@ class Alarm{
             seconds -= 1
         } else if batteryState.isNeededToCharge() && soundflag == 1 {
             audioPlayer?.play()
+            self.vibrate()
             self.stopTimerWithCharging()
         } else {
             seconds = calculateInterval(alertTime: selectedAlertTime!)
@@ -65,6 +67,10 @@ class Alarm{
         let calender = Calendar.current
         let seconds = calender.component(.second, from: alertTime)
         return interval - seconds
+    }
+    
+    func vibrate() {
+        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
     }
     
     func stopTimer() {
