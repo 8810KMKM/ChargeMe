@@ -173,7 +173,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="2. 充電残量が, 今から指定する充電以下である." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YDS-d8-sSm">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="2. バッテリー残量が, 以下の値より小さい." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YDS-d8-sSm">
                                 <rect key="frame" x="-3" y="205.5" width="381" height="40"/>
                                 <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
