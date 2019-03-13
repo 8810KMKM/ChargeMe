@@ -14,7 +14,6 @@
         <!--CHARGE-ME-->
         <scene sceneID="PLA-YP-OMh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r0z-0L-iR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="tKO-g7-uhJ" customClass="MainViewController" customModule="ChargeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LjZ-6a-9Tz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -167,15 +166,16 @@
                     <navigationItem key="navigationItem" title="CHARGE-ME" id="1GT-t9-Rmy"/>
                     <connections>
                         <outlet property="alertCount" destination="q6f-ZJ-Bya" id="ijF-uc-Ven"/>
+                        <outlet property="mainBar" destination="NNO-af-TQZ" id="ToI-IO-NTv"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r0z-0L-iR9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2428" y="26.53673163418291"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="krA-ZY-bsP">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="VNH-GL-IOl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController storyboardIdentifier="MainViewController" automaticallyAdjustsScrollViewInsets="NO" id="2eJ-U2-6nf" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wS3-zp-zE5">
@@ -192,6 +192,7 @@
                         <segue destination="tKO-g7-uhJ" kind="relationship" relationship="rootViewController" id="MPV-Uv-lyA"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VNH-GL-IOl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1601" y="27"/>
         </scene>

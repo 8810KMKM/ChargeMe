@@ -12,6 +12,8 @@ import UserNotifications
 class MainViewController: UIViewController {
 
     @IBOutlet weak var alertCount: UILabel!
+    @IBOutlet weak var mainBar: UIView!
+    
     
     var currentTime = CurrentTime()
     let alarm = Alarm()
