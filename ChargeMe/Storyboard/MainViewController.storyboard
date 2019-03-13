@@ -132,7 +132,7 @@
                                             <constraint firstItem="HhP-ZR-ODd" firstAttribute="centerY" secondItem="qSV-61-udc" secondAttribute="centerY" constant="23" id="wgT-C4-InI"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="timingLabel" destination="HhP-ZR-ODd" id="4AK-ct-FR7"/>
+                                            <outlet property="alertBatteryLevelLabel" destination="HhP-ZR-ODd" id="4AK-ct-FR7"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

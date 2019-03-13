@@ -212,7 +212,7 @@
                         <viewLayoutGuide key="safeArea" id="Jwy-AN-J9m"/>
                     </view>
                     <connections>
-                        <outlet property="timingTextField" destination="ZkY-zA-dOL" id="CKa-HZ-tvW"/>
+                        <outlet property="batteryLevelTextField" destination="ZkY-zA-dOL" id="CKa-HZ-tvW"/>
                         <segue destination="saS-eH-Xrr" kind="show" identifier="SegueToMainVIew" id="bt9-fj-7y7"/>
                     </connections>
                 </viewController>

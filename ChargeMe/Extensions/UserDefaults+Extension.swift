@@ -10,7 +10,7 @@ import UIKit
 
 private struct UserDefaultsKeys {
     static let sleepTime = "sleepTime"
-    static let alertTiming =  "alertTiming"
+    static let alertBatteryLevel =  "alertBatteryLevel"
     static let sleepTimeByDate = "sleepTimeByDate"
 }
 
@@ -20,16 +20,9 @@ extension UserDefaults {
         set { self.standard.set(newValue, forKey: UserDefaultsKeys.sleepTime) }
     }
     
-    static var alertTiming: String {
-        get {
-            print(self.standard.string(forKey: UserDefaultsKeys.alertTiming)?.characters.count)
-            if self.standard.string(forKey: UserDefaultsKeys.alertTiming) == "1" || self.standard.string(forKey: UserDefaultsKeys.alertTiming) == "5"  {
-                return "0" + (self.standard.string(forKey: UserDefaultsKeys.alertTiming) ?? "")
-            }
-            return self.standard.string(forKey: UserDefaultsKeys.alertTiming) ?? ""
-            
-        }
-        set { self.standard.set(newValue, forKey: UserDefaultsKeys.alertTiming) }
+    static var alertBatteryLevel: Int {
+        get { return self.standard.integer(forKey: UserDefaultsKeys.alertBatteryLevel) }
+        set { self.standard.set(newValue, forKey: UserDefaultsKeys.alertBatteryLevel) }
     }
     
     static var sleepTimeByDate: Date {

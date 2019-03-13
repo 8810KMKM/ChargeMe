@@ -54,7 +54,7 @@ class SetTimingViewController: UIViewController,UIPickerViewDelegate, UIPickerVi
     }
 
     func textFieldDidEndEditing(_ textField: UITextField) {
-        UserDefaults.alertTiming = self.timingTextField.text!
+        UserDefaults.alertBatteryLevel = 10
         performSegue(withIdentifier: "timingSegue", sender: nil)
     }
 }

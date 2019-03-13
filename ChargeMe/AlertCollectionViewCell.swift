@@ -9,10 +9,10 @@
 import UIKit
 
 class AlertCollectionViewCell: UICollectionViewCell {
-    @IBOutlet weak var timingLabel: UILabel!
+    @IBOutlet weak var alertBatteryLevelLabel: UILabel!
     
-    func updateCell(timing: String) {
-        timingLabel.text = timing
+    func updateCell(alertBatteryLevel: String) {
+        alertBatteryLevelLabel.text = alertBatteryLevel
     }
     
 }

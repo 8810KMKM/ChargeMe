@@ -48,8 +48,8 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "alertCell", for: indexPath) as! AlertCollectionViewCell
-            print(UserDefaults.alertTiming)
-            cell.updateCell(timing: UserDefaults.alertTiming)
+            print(UserDefaults.alertBatteryLevel)
+            cell.updateCell(alertBatteryLevel: String(UserDefaults.alertBatteryLevel))
             return cell
             
         }
