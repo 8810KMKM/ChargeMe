@@ -117,7 +117,6 @@
                     </view>
                     <connections>
                         <outlet property="timingTextField" destination="jww-Ak-Hkg" id="aW3-CL-GjO"/>
-                        <segue destination="saS-eH-Xrr" kind="show" identifier="timingSegue" id="tt0-6B-bFK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5dR-h9-PtQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -214,6 +213,7 @@
                     </view>
                     <connections>
                         <outlet property="timingTextField" destination="ZkY-zA-dOL" id="CKa-HZ-tvW"/>
+                        <segue destination="saS-eH-Xrr" kind="show" identifier="SegueToMainVIew" id="bt9-fj-7y7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Lg-wt-M8M" userLabel="First Responder" sceneMemberID="firstResponder"/>
