@@ -15,9 +15,7 @@ class BatteryState {
     init() {
         UIDevice.current.isBatteryMonitoringEnabled = true
     }
-    
-    
-    
+
     func updateBsBar(mainView: UIView) {
         let mainWidth = mainView.frame.width
         let mainHeight = mainView.frame.height
@@ -33,6 +31,18 @@ class BatteryState {
             view1.backgroundColor = UIColor.brown
         }
         mainView.addSubview(view1)
+    }
+    
+    func CurrentBatteryLevel()->Int {
+        return Int((UIDevice.current.batteryLevel + 0.005) * 100)
+    }
+    
+    func isNeededToCharge()->Bool {
+        if  CurrentBatteryLevel() < UserDefaults.alertBatteryLevel {
+            return true
+        } else {
+            return false
+        }
     }
     
     func isCharging()-> Bool {

@@ -35,12 +35,11 @@ class Alarm{
         if seconds != 0 {
             print(seconds)
             seconds -= 1
-        } else {
+        } else if batteryState.isNeededToCharge() {
             audioPlayer?.play()
-//            Thread.sleep(forTimeInterval: 1)
             self.stopTimerWithCharging()
-//            Thread.sleep(forTimeInterval: 30)
-//            audioPlayer?.stop()
+        } else {
+            seconds = calculateInterval(alertTime: selectedAlertTime!)
         }
     }
     

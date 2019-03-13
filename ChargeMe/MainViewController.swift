@@ -39,7 +39,7 @@ class MainViewController: UIViewController {
     }
     
     @objc private func updateChargeTimer() {
-        alertCount.text = String(Int((UIDevice.current.batteryLevel + 0.005) * 100)) + "%"
+        alertCount.text = String(alarm.batteryState.CurrentBatteryLevel()) + "%"
         alarm.batteryState.updateBsBar(mainView: mainBar)
     }
     
