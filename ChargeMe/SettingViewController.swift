@@ -32,7 +32,7 @@ class SettingViewController: UIPageViewController {
 
 extension SettingViewController: UIPageViewControllerDataSource {
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        if viewController.isKind(of: SetTimingViewController.self) {
+        if viewController.isKind(of: SettingBatteryViewController.self) {
             pageControl.currentPage = 1
             return self.allViewControllers[0]
         } else if viewController.isKind(of: SettingSleepViewController.self) {
@@ -44,7 +44,7 @@ extension SettingViewController: UIPageViewControllerDataSource {
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        if viewController.isKind(of: SetTimingViewController.self) {
+        if viewController.isKind(of: SettingBatteryViewController.self) {
             pageControl.currentPage = 1
             return self.allViewControllers[0]
         } else if viewController.isKind(of: SettingSleepViewController.self) {
