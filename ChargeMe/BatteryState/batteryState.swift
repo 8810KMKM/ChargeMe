@@ -10,13 +10,13 @@ import UIKit
 
 
 class BatteryState {
-    var chargeTimer: Timer?
     var bsBar: UIView?
     
     init() {
         UIDevice.current.isBatteryMonitoringEnabled = true
-//        runTimer()
     }
+    
+    
     
     func updateBsBar(mainView: UIView) {
         let mainWidth = mainView.frame.width

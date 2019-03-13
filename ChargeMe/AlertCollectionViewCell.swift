@@ -12,7 +12,7 @@ class AlertCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var alertBatteryLevelLabel: UILabel!
     
     func updateCell(alertBatteryLevel: String) {
-        alertBatteryLevelLabel.text = alertBatteryLevel
+        alertBatteryLevelLabel.text = alertBatteryLevel + "%"
     }
     
 }
