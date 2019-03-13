@@ -25,7 +25,13 @@ class BatteryState {
         let barWidth = mainWidth * CGFloat(batteryLevel)
         
         let view1 = UIView(frame: CGRect(x: 0, y: 0, width: barWidth, height: mainHeight))
-        view1.backgroundColor = UIColor.blue
+        
+        
+        if self.isCharging() {
+            view1.backgroundColor = UIColor.green
+        } else {
+            view1.backgroundColor = UIColor.brown
+        }
         mainView.addSubview(view1)
     }
     
