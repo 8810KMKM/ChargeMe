@@ -17,7 +17,7 @@ class SettingViewController: UIPageViewController {
         self.dataSource = self
         // Do any additional setup after loading the view.
         pageControl = UIPageControl(frame: CGRect(x:0, y:self.view.frame.height - 100, width:self.view.frame.width, height:50))
-        pageControl.backgroundColor = .orange
+        pageControl.backgroundColor = UIColor(displayP3Red: 69/255, green: 223/255, blue: 73/255, alpha: 0.8)
         pageControl.numberOfPages = 2
         pageControl.currentPage = 0
         pageControl.isUserInteractionEnabled = false

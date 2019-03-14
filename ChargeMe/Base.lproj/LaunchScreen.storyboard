@@ -20,17 +20,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_launch" translatesAutoresizingMaskIntoConstraints="NO" id="dqt-qk-zTg">
-                                <rect key="frame" x="89.5" y="200" width="196" height="130"/>
+                                <rect key="frame" x="89.5" y="220" width="196" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="tKA-0M-eCl"/>
                                     <constraint firstAttribute="width" constant="196" id="ucf-Gy-giV"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHARGE-ME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxq-Xt-gNz">
+                                <rect key="frame" x="87.5" y="366" width="196.5" height="52"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="52"/>
+                                <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="Main"/>
                         <constraints>
                             <constraint firstItem="dqt-qk-zTg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4Al-OL-Btc"/>
-                            <constraint firstItem="dqt-qk-zTg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="180" id="MKF-BS-2iU"/>
+                            <constraint firstItem="Jxq-Xt-gNz" firstAttribute="top" secondItem="dqt-qk-zTg" secondAttribute="bottom" constant="16" id="FkD-sY-1jx"/>
+                            <constraint firstItem="dqt-qk-zTg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="MKF-BS-2iU"/>
+                            <constraint firstItem="Jxq-Xt-gNz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-2" id="gA8-ds-mf4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

@@ -21,6 +21,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x2b-ud-66e" customClass="DoneTextField" customModule="ChargeMe" customModuleProvider="target">
                                 <rect key="frame" x="64" y="293.5" width="247" height="80"/>
+                                <color key="backgroundColor" red="0.92148774860000005" green="0.9216202497" blue="0.92145884040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="i96-YH-EWJ"/>
                                 </constraints>
@@ -34,7 +35,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたが寝る時間は?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aTb-mc-MfZ">
                                 <rect key="frame" x="68" y="236.5" width="239.5" height="25"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.92148774860000005" green="0.9216202497" blue="0.92145884040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -163,50 +164,50 @@
                                     <constraint firstAttribute="width" constant="240" id="WJ0-zJ-mhn"/>
                                     <constraint firstAttribute="height" constant="56" id="o0a-1M-nIs"/>
                                 </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.92148774860000005" green="0.9216202497" blue="0.92145884040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENm-Rb-NTI">
-                                <rect key="frame" x="264" y="321" width="23" height="25"/>
-                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="2. バッテリー残量が, 以下の値より小さい." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="YDS-d8-sSm">
                                 <rect key="frame" x="-3" y="205.5" width="381" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="0.7498624559859155" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="381" id="1ru-96-8dx"/>
                                     <constraint firstAttribute="height" constant="40" id="gbY-54-Dtb"/>
                                 </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.92148774860000005" green="0.9216202497" blue="0.92145884040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="1. このデバイスが充電されていない." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="IOR-Qd-yMK">
                                 <rect key="frame" x="-3" y="157.5" width="381" height="40"/>
-                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="0.748321963028169" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="381" id="dVc-2F-K0j"/>
                                     <constraint firstAttribute="height" constant="40" id="yh1-8D-42S"/>
                                 </constraints>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" red="0.92148774860000005" green="0.9216202497" blue="0.92145884040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ENm-Rb-NTI">
+                                <rect key="frame" x="256" y="309.5" width="23" height="64"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="64"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="Main"/>
                         <constraints>
                             <constraint firstItem="ZkY-zA-dOL" firstAttribute="centerY" secondItem="sNn-sU-9zs" secondAttribute="centerY" id="2JJ-zs-Q27"/>
                             <constraint firstItem="IOR-Qd-yMK" firstAttribute="centerX" secondItem="sNn-sU-9zs" secondAttribute="centerX" id="8H7-9J-v7K"/>
                             <constraint firstItem="ZkY-zA-dOL" firstAttribute="top" secondItem="YDS-d8-sSm" secondAttribute="bottom" constant="48" id="BlS-XG-4qP"/>
-                            <constraint firstItem="ENm-Rb-NTI" firstAttribute="leading" secondItem="ZkY-zA-dOL" secondAttribute="trailing" constant="16" id="HzG-QU-33J"/>
-                            <constraint firstItem="ENm-Rb-NTI" firstAttribute="centerY" secondItem="sNn-sU-9zs" secondAttribute="centerY" id="Nxz-Tl-UKI"/>
                             <constraint firstItem="YDS-d8-sSm" firstAttribute="top" secondItem="IOR-Qd-yMK" secondAttribute="bottom" constant="8" id="WgB-9t-xcN"/>
                             <constraint firstItem="ZkY-zA-dOL" firstAttribute="leading" secondItem="Jwy-AN-J9m" secondAttribute="leading" constant="104" id="XrC-Bs-KqG"/>
                             <constraint firstItem="AZ5-1t-m3C" firstAttribute="centerX" secondItem="sNn-sU-9zs" secondAttribute="centerX" id="Zmc-1O-Nom"/>
                             <constraint firstItem="IOR-Qd-yMK" firstAttribute="top" secondItem="AZ5-1t-m3C" secondAttribute="bottom" constant="24" id="ak2-3X-RsV"/>
+                            <constraint firstItem="ENm-Rb-NTI" firstAttribute="top" secondItem="YDS-d8-sSm" secondAttribute="bottom" constant="64" id="eN0-As-poR"/>
+                            <constraint firstItem="ENm-Rb-NTI" firstAttribute="leading" secondItem="ZkY-zA-dOL" secondAttribute="trailing" constant="8" id="fyt-sO-QwA"/>
                             <constraint firstItem="YDS-d8-sSm" firstAttribute="centerX" secondItem="sNn-sU-9zs" secondAttribute="centerX" id="nFX-1o-KOd"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jwy-AN-J9m"/>
