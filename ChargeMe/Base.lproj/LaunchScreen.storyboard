@@ -19,28 +19,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_2" translatesAutoresizingMaskIntoConstraints="NO" id="XpO-G5-WJw">
-                                <rect key="frame" x="59" y="190" width="257" height="287"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_launch" translatesAutoresizingMaskIntoConstraints="NO" id="dqt-qk-zTg">
+                                <rect key="frame" x="89.5" y="220" width="196" height="130"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="287" id="OuR-WS-ubP"/>
+                                    <constraint firstAttribute="height" constant="130" id="tKA-0M-eCl"/>
+                                    <constraint firstAttribute="width" constant="196" id="ucf-Gy-giV"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHARGE-ME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jxq-Xt-gNz">
+                                <rect key="frame" x="87.5" y="366" width="196.5" height="52"/>
+                                <fontDescription key="fontDescription" name="DINCondensed-Bold" family="DIN Condensed" pointSize="52"/>
+                                <color key="textColor" red="0.93725490570000003" green="0.93725490570000003" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" name="Main"/>
                         <constraints>
-                            <constraint firstItem="XpO-G5-WJw" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="d5u-4T-ZAZ"/>
-                            <constraint firstItem="XpO-G5-WJw" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="pH5-6e-H7c"/>
+                            <constraint firstItem="dqt-qk-zTg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4Al-OL-Btc"/>
+                            <constraint firstItem="Jxq-Xt-gNz" firstAttribute="top" secondItem="dqt-qk-zTg" secondAttribute="bottom" constant="16" id="FkD-sY-1jx"/>
+                            <constraint firstItem="dqt-qk-zTg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="MKF-BS-2iU"/>
+                            <constraint firstItem="Jxq-Xt-gNz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-2" id="gA8-ds-mf4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
     <resources>
-        <image name="logo_2" width="257" height="287"/>
+        <image name="logo_launch" width="1495" height="1024"/>
         <namedColor name="Main">
             <color red="0.63529411764705879" green="0.59215686274509804" blue="0.56470588235294117" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
