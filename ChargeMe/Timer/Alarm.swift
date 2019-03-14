@@ -52,6 +52,8 @@ class Alarm{
         let sound:URL = URL(fileURLWithPath: soundFilePath)
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: sound, fileTypeHint: nil)
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
+            try AVAudioSession.sharedInstance().setActive(true)
         } catch {
             print("Cloud not load file")
         }

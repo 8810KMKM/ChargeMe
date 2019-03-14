@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4510E57921EA471C008853F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4510E57721EA471C008853F4 /* Main.storyboard */; };
-		4510E57B21EA471F008853F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4510E57A21EA471F008853F4 /* Assets.xcassets */; };
 		4510E57E21EA471F008853F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4510E57C21EA471F008853F4 /* LaunchScreen.storyboard */; };
 		452152E7222D2A0F005CEA6A /* MainViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 452152E6222D2A0F005CEA6A /* MainViewController.storyboard */; };
 		452152EA222D2D06005CEA6A /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 452152E9222D2D06005CEA6A /* UserDefaults+Extension.swift */; };
@@ -18,6 +17,7 @@
 		453265BD2237D9DC00033BA4 /* batteryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453265BC2237D9DC00033BA4 /* batteryState.swift */; };
 		453265BF223809BE00033BA4 /* warning1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 453265BE223809BE00033BA4 /* warning1.mp3 */; };
 		453265C32238F95000033BA4 /* SettingBatteryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453265C22238F95000033BA4 /* SettingBatteryViewController.swift */; };
+		453265C4223A7AEC00033BA4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4510E57A21EA471F008853F4 /* Assets.xcassets */; };
 		45404CAE2226560200DF7BAA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45404CAD2226560200DF7BAA /* AppDelegate.swift */; };
 		45404CB2222659D500DF7BAA /* DoneTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45404CB1222659D500DF7BAA /* DoneTextField.swift */; };
 		45404CB922265AD400DF7BAA /* TimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45404CB422265AD300DF7BAA /* TimeCollectionViewCell.swift */; };
@@ -216,8 +216,8 @@
 				452152E7222D2A0F005CEA6A /* MainViewController.storyboard in Resources */,
 				453265BF223809BE00033BA4 /* warning1.mp3 in Resources */,
 				4510E57E21EA471F008853F4 /* LaunchScreen.storyboard in Resources */,
-				4510E57B21EA471F008853F4 /* Assets.xcassets in Resources */,
 				4510E57921EA471C008853F4 /* Main.storyboard in Resources */,
+				453265C4223A7AEC00033BA4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
